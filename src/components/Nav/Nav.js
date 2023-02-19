@@ -2,7 +2,7 @@ import "./Nav.css";
 import React from "react";
 
 function Nav() {
-    return <div className="nav-container">
+    return <div className="grid nav-container">
         <div className="nav-item grow">
             <a href="/" style={{ textDecoration: "none" }}>
                 <span>Home</span>
