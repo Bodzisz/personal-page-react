@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import "@picocss/pico";
 import './App.css';
+import './utils/typewriter';
+import React from "react";
+import Nav from "./components/Nav/Nav";
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import MainPage from './components/MainPage/MainPage';
+import Projects from "./components/Projects/Projects";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage/>,
+  },
+  {
+    path: "/projects",
+    element: <Projects/>
+  }
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>
+      <RouterProvider router={router} />
     </div>
   );
 }
