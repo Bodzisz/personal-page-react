@@ -14,7 +14,7 @@ function Nav() {
             </a>
         </div>
         <div className="nav-item grow">
-            <a href="#" style={{ textDecoration: "none" }}>
+            <a href="/contact" style={{ textDecoration: "none" }}>
                 <span>Contacts</span>
             </a>
         </div>
