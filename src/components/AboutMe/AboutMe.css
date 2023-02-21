@@ -1,9 +1,3 @@
-hr {
-    height: 1px;
-    background-color: var(--primary-hover);
-    border: none;
-}
-
 .about-me {
     padding-top: 50%;
     padding-bottom: 10%;
@@ -23,9 +17,6 @@ hr {
     color: var(--primary-hover);
 }
 
-.arrowUp-div {
-}
-
 .about-me-article {
     margin-top: 10px;
     border-radius: 20px;
@@ -38,6 +29,16 @@ hr {
 
 .article-header-java {
     text-align: right;
+}
+
+.technologies-grid {
+    place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-desc {
+    padding-top: 30px;
 }
 
 @media screen and (max-width: 992px) {
