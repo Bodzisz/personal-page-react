@@ -4,25 +4,25 @@ import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-content">
-        <div className="social">
+    <footer className="footer">
+      <ul className="footer-content">
+        <li className="social">
           <a href="https://twitter.com/k4cper_wojcicki">
             <BsTwitter />
           </a>
-        </div>
-        <div className="social">
+        </li>
+        <li className="social">
           <a href="https://github.com/Bodzisz">
             <BsGithub />
           </a>
-        </div>
-        <div className="social">
+        </li>
+        <li className="social">
           <a href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b">
             <BsLinkedin />
           </a>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </footer>
   );
 }
 

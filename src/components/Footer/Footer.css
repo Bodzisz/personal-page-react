@@ -9,9 +9,17 @@
     color: #fff;
 }
 
-.footer-content {
+/* .footer-content {
     display: inline-flex;
-    padding: 15px 40% 15px 40%;
+    margin: 15px 40% 15px 40%;
+} */
+
+.footer ul li {
+    list-style: none;
+    margin: 15px 2% 0px 2%;
+    font-size: 1.0em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .social {
