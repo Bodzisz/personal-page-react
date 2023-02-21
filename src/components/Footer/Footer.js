@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 function Footer() {
   return (
@@ -7,17 +8,17 @@ function Footer() {
       <div className="footer-content">
         <div className="social">
           <a href="https://twitter.com/k4cper_wojcicki">
-            <i className="fa fa-twitter"></i>
+            <BsTwitter />
           </a>
         </div>
         <div className="social">
           <a href="https://github.com/Bodzisz">
-            <i className="fa fa-github"></i>
+            <BsGithub />
           </a>
         </div>
         <div className="social">
           <a href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b">
-            <i className="fa fa-linkedin"></i>
+            <BsLinkedin />
           </a>
         </div>
       </div>
