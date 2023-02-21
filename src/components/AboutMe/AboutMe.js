@@ -21,7 +21,11 @@ function AboutMe() {
           offset={-70}
           duration={1000}
         >
-          <MdOutlineKeyboardArrowUp className="grow" size="100" id="up-arrow" />
+          <MdOutlineKeyboardArrowUp
+            className="grow arrow-up"
+            size="100"
+            id="up-arrow"
+          />
         </Link>
       </div>
     </div>

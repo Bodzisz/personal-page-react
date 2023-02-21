@@ -1,5 +1,5 @@
 .about-me {
-    padding-top: 50%;
+    padding-top: 60%;
     padding-bottom: 10%;
 }
 
@@ -66,5 +66,27 @@
     .about-me-name {
         text-align: center; 
         white-space: nowrap;
+    }
+
+    .technologies-grid {
+        place-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .icon-div {
+        padding: 30px;
+    }
+
+    .icon-div .grow {
+        transition: none;
+    }
+
+    .icon-div .grow:hover {
+        transform: scale(1.0); 
+    }
+
+    .arrow-up {
+        padding-bottom: 20px;
     }
 }

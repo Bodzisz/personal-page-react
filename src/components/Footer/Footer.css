@@ -6,13 +6,12 @@
     background: #000;
     height: auto;
     width: 100vw;
-    font-family: "Open Sans";
     color: #fff;
 }
 
 .footer-content {
     display: inline-flex;
-    margin: 15px 40% 15px 40%;
+    padding: 15px 40% 15px 40%;
 }
 
 .social {
