@@ -1,0 +1,69 @@
+hr {
+    height: 1px;
+    background-color: var(--primary-hover);
+    border: none;
+}
+
+.about-me {
+    padding-top: 50%;
+    padding-bottom: 10%;
+}
+
+.about-me h2 {
+    font-family: "Bungee", sans-serif;
+    margin-bottom: 10px;
+}
+
+.about-me-name {
+    text-align: "left"; 
+    white-space: nowrap;
+}
+
+.primary-hover-color {
+    color: var(--primary-hover);
+}
+
+.arrowUp-div {
+}
+
+.about-me-article {
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.article-header-grid {
+    padding-right: 100px;
+}
+
+.article-header-java {
+    text-align: right;
+}
+
+@media screen and (max-width: 992px) {
+    .grid-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me {
+        padding-top: 200%;
+        padding-bottom: 10%;
+    }
+
+    .article-header-grid {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .article-header-java {
+        text-align: center;
+        padding-bottom: 10px; 
+    }
+
+    .about-me-name {
+        text-align: center; 
+        white-space: nowrap;
+    }
+}
