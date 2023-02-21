@@ -11,15 +11,20 @@ function Contact() {
       >
         <input type="hidden" name="_subject" value="Personal Page Email" />
 
-        <label htmlFor="message">
-          Message
-          <textarea type="text" name="message" rows="5" required />
-        </label>
+        <textarea
+          type="text"
+          name="message"
+          rows="5"
+          placeholder="Type your message"
+          required
+        />
 
-        <label htmlFor="email">
-          Your Email Address
-          <input type="email" name="email" required />
-        </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        />
 
         <button type="submit" className="submit-button">
           Send
