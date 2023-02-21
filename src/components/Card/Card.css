@@ -38,6 +38,7 @@
 .card-title {
     position: relative;
     width: max-content;
+    font-family: "Poppins", sans-serif;
 }
 
 .card-title::after {

@@ -1,10 +1,10 @@
 import "@picocss/pico";
-import './App.css';
-import './utils/typewriter';
+import "./App.css";
+import "./utils/typewriter";
 import React from "react";
 import Nav from "./components/Nav/Nav";
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import MainPage from './components/MainPage/MainPage';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainPage from "./components/MainPage/MainPage";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -12,24 +12,24 @@ import Footer from "./components/Footer/Footer";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage/>,
+    element: <MainPage />,
   },
   {
     path: "/projects",
-    element: <Projects/>
+    element: <Projects />,
   },
   {
     path: "/contact",
-    element: <Contact/>
-  }
+    element: <Contact />,
+  },
 ]);
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Nav />
       <RouterProvider router={router} />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

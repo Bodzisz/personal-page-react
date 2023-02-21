@@ -2,7 +2,7 @@ import Welcome from "../Welcome/Welcome";
 import React from "react";
 
 function MainPage() {
-    return <Welcome/>;
+  return <Welcome />;
 }
 
 export default MainPage;
