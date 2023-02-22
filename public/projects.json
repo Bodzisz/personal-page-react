@@ -26,5 +26,26 @@
         "desc": "Data anylisis project. Shows effects of alcohol on life factors using linear and polynominal regression with results on the plots",
         "image": "alcohol.jpg",
         "repo_url": "https://github.com/Bodzisz/Alcohol-Influence-On-Life-Factors"
+    },
+    {
+        "id": 5,
+        "title": "Daddy Jokes",
+        "desc": "Jokes CRUD website created using python (Flask) with MongoDB and SqlLite. Contains user authentication and authorization",
+        "image": "daddy-jokes-image.jpg",
+        "repo_url": "https://github.com/Bodzisz/Daddy-Jokes"
+    },
+    {
+        "id": 6,
+        "title": "DrinkFinder",
+        "desc": "Android App where users can find drinks by selecting ingredients they would like to have in it. Additionaly there is find drink by name option",
+        "image": "drinkfinder-img.jpeg",
+        "repo_url": "https://github.com/Bodzisz/DrinkFinder"
+    },
+    {
+        "id": 7,
+        "title": "Presence Checker",
+        "desc": "IoT system that helps teacher checking students presence in classes by applying RFID card to the reader",
+        "image": "presence-checker-img.jpeg",
+        "repo_url": "https://github.com/Bodzisz/ioT-StudentPresenceChecker"
     }
 ]
