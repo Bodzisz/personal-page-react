@@ -2,7 +2,7 @@
   "name": "personal-site-renewal",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://github.com/Bodzisz/personal-page-react",ś
+  "homepage": "http://github.com/Bodzisz/personal-page-react",
   "dependencies": {
     "@picocss/pico": "^1.5.7",
     "@testing-library/jest-dom": "^5.16.5",
