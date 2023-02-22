@@ -7,7 +7,7 @@ function Welcome() {
       <h1
         className="typewrite"
         data-type='[ "Hello, welcome to my site!","I am a Java Developer.", "I am happy you are here ;)" ]'
-      ></h1>
+      >Hello, welcome to my site!</h1>
     </div>
   );
 }

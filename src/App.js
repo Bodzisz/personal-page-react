@@ -25,8 +25,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  console.log(process.env.REACT_APP_PUBLIC_URL);
+  console.log(process.env.NODE_ENV);
   return (
-    <div className="App">
+    <div className="App" style={{"--bckground":`linear-gradient(rgba(0,0,0), rgba(0,0,0,0.7)), 
+    url( ${require(`${process.env.REACT_APP_PUBLIC_URL}/images/background2.jpg`)}) no-repeat center center fixed`}}>
       <Nav />
       <RouterProvider router={router} />
       <Footer />
