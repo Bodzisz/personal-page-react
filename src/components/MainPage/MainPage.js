@@ -3,7 +3,7 @@ import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import "./MainPage.css";
 import AboutMe from "../AboutMe/AboutMe";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 function MainPage() {
   return (
