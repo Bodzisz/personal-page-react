@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Bodzisz/personal-page-react/precache-manifest.d81e6041cefda2118ec5a2656c1c1b9a.js"
+  "/personal-page-react/precache-manifest.fd1fdc462b5f5a52b1f6ffcd62ff5845.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Bodzisz/personal-page-react/index.html", {
+workbox.routing.registerNavigationRoute("/personal-page-react/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
