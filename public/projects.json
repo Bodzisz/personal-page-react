@@ -37,7 +37,7 @@
     {
         "id": 6,
         "title": "DrinkFinder",
-        "desc": "Android App where users can find drinks by selecting ingredients they would like to have in it. Additionaly there is find drink by name option",
+        "desc": "Android app where users can search for drinks with preparation instrucitons by selecting their ingredients",
         "image": "drinkfinder-img.jpeg",
         "repo_url": "https://github.com/Bodzisz/DrinkFinder"
     },
