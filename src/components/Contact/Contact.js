@@ -1,10 +1,19 @@
 import React from "react";
 import "./Contact.css";
+import Typewriter from "typewriter-effect";
 
 function Contact() {
   return (
     <div className="container form-div">
-      <h3 className="typewrite" data-type='[ "Send me an email!" ]'>Send me an email!</h3>
+      <h3>
+        <Typewriter
+          options={{
+            strings: ["Send me an email!"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </h3>
       <form
         action="https://formsubmit.co/kacper.wojcicki@protonmail.com"
         method="POST"

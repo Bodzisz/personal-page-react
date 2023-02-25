@@ -1,6 +1,5 @@
 import "@picocss/pico";
 import "./App.css";
-import "./utils/typewriter";
 import React from "react";
 import Nav from "./components/Nav/Nav";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
