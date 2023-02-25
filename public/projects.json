@@ -23,14 +23,14 @@
     {
         "id": 4,
         "title": "Effects of Alcohol",
-        "desc": "Data anylisis project. Shows effects of alcohol on life factors using linear and polynominal regression with results on the plots",
+        "desc": "Data anylisis project. Shows effects of alcohol on life factors using linear and polynominal regression on the plots",
         "image": "alcohol.jpg",
         "repo_url": "https://github.com/Bodzisz/Alcohol-Influence-On-Life-Factors"
     },
     {
         "id": 5,
         "title": "Daddy Jokes",
-        "desc": "Jokes CRUD website created using python (Flask) with MongoDB and SqlLite. Contains user authentication and authorization",
+        "desc": "Jokes CRUD website created using python (Flask) with MongoDB and SqlLite, user authentication and authorization",
         "image": "daddy-jokes-image.jpg",
         "repo_url": "https://github.com/Bodzisz/Daddy-Jokes"
     },
