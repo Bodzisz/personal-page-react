@@ -9,10 +9,9 @@
     color: #fff;
 }
 
-/* .footer-content {
-    display: inline-flex;
-    margin: 15px 40% 15px 40%;
-} */
+.footer-content {
+    padding-inline-start: 0;
+}
 
 .footer ul li {
     list-style: none;
