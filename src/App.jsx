@@ -1,4 +1,3 @@
-import "@picocss/pico";
 import "./App.css";
 import React from "react";
 import Nav from "./components/Nav/Nav";
@@ -7,6 +6,7 @@ import MainPage from "./components/MainPage/MainPage";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { AppShell } from "@mantine/core";
 
 const router = createBrowserRouter([
   {
@@ -25,11 +25,12 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <AppShell className="App">
       <Nav />
+
       <RouterProvider router={router} />
       <Footer />
-    </div>
+    </AppShell>
   );
 }
 
