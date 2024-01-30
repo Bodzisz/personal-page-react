@@ -1,25 +1,30 @@
 import React from "react";
-import "./Footer.css";
+import classes from "./Footer.module.css";
 import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
+import { Anchor } from "@mantine/core";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <ul className="footer-content">
-        <li className="social">
-          <a href="https://twitter.com/k4cper_wojcicki">
+    <footer className={classes.footer}>
+      <ul className={classes.footerContent}>
+        <li className={classes.social}>
+          <Anchor href="https://twitter.com/k4cper_wojcicki" underline="never" className={classes.hover}>
             <BsTwitter />
-          </a>
+          </Anchor>
         </li>
-        <li className="social">
-          <a href="https://github.com/Bodzisz">
+        <li className={classes.social}>
+          <Anchor href="https://github.com/Bodzisz" underline="never" className={classes.hover}>
             <BsGithub />
-          </a>
+          </Anchor>
         </li>
-        <li className="social">
-          <a href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b">
+        <li className={classes.social}>
+          <Anchor
+            href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b"
+            underline="never"
+            className={classes.hover}
+          >
             <BsLinkedin />
-          </a>
+          </Anchor>
         </li>
       </ul>
     </footer>

@@ -6,10 +6,9 @@
   background: #000;
   height: 80px;
   width: 100vw;
-  color: #fff;
 }
 
-.footer-content {
+.footerContent {
   padding-inline-start: 0;
 }
 
@@ -23,4 +22,16 @@
 
 .social {
   margin: 0 10px 0 10px;
+
+  @mixin hover {
+    transform: scale(1.4);
+  }
+}
+
+.hover {
+  color: var(--primary-inverse);
+
+  @mixin hover {
+    color: var(--primary-hover);
+  }
 }
