@@ -1,24 +1,20 @@
-import "./Welcome.css";
+import { Container, Title } from "@mantine/core";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
 function Welcome() {
   return (
-    <div className="container typediv">
-      <h1>
+    <Container>
+      <Title order={1} style={{ fontFamily: "Poppins sans-serif" }}>
         <Typewriter
           options={{
-            strings: [
-              "Hello, welcome to my site!",
-              "I am a Java Developer.",
-              "I am happy you are here ;)",
-            ],
+            strings: ["Hello, welcome to my site!", "I am a Java Developer.", "I am happy you are here ;)"],
             autoStart: true,
             loop: true,
           }}
         />
-      </h1>
-    </div>
+      </Title>
+    </Container>
   );
 }
 
