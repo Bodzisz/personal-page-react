@@ -51,7 +51,7 @@ function Nav() {
   };
 
   return (
-    <Container pt={20}>
+    <Container pt={20} pb={30}>
       {getNavOptions()}
       <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" pt={20} size={40} />
       {getMobileNavOptions()}
