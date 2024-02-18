@@ -27,7 +27,6 @@ function App() {
   return (
     <AppShell className="App">
       <Nav />
-
       <RouterProvider router={router} />
       <Footer />
     </AppShell>
