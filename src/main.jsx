@@ -8,7 +8,7 @@ import { MantineProvider, createTheme } from "@mantine/core";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const theme = createTheme({
-  primaryColor: "bright-pink",
+  primaryColor: "yellow",
   colors: {
     "bright-pink": [
       "#F0BBDD",
@@ -21,6 +21,18 @@ const theme = createTheme({
       "#E00890",
       "#C50E82",
       "#AD1374",
+    ],
+    yellow: [
+      "#FFFF00",
+      "#FFFF99",
+      "#FFF44F",
+      "#FFFE71",
+      "#FFDC35",
+      "#DAA520",
+      "#FBEC5D",
+      "#FFDB58",
+      "#FFBF00",
+      "#FFD700",
     ],
   },
 });

@@ -6,52 +6,10 @@ import { SimpleGrid, Tooltip, useMantineTheme, Container, TooltipFloating } from
 import { useMediaQuery } from "@mantine/hooks";
 
 function TechnologiesIcons() {
-  const isShownInitialData = {
-    spring: false,
-    hibernate: false,
-    sql: false,
-    react: false,
-    linux: false,
-    docker: false,
-    python: false,
-    html: false,
-    git: false,
-  };
-  const [isShown, setIsShown] = useState(isShownInitialData);
-  const [usingTouch, setUsingTouch] = useState(false);
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   const tooltipEvents = { hover: true, focus: false, touch: true };
-
-  useEffect(() => {
-    window.addEventListener("touchstart", handleTouchStart());
-
-    return () => {
-      window.removeEventListener("touchstart", handleTouchStart());
-    };
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("touchend", handleTouchEnd());
-
-    return () => {
-      window.removeEventListener("touchend", handleTouchEnd());
-    };
-  }, []);
-
-  const handleTouchStart = () => {
-    setUsingTouch(true);
-  };
-  const handleTouchEnd = () => {
-    setUsingTouch(false);
-  };
-
-  const setIconShown = (fieldName, value, shouldUseTouch) => {
-    if (usingTouch === shouldUseTouch) {
-      setIsShown({ ...isShown, [fieldName]: value });
-    }
-  };
 
   const withTooltip = (label, children) => {
     return (

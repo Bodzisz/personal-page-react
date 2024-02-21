@@ -1,14 +1,25 @@
 .App {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url(/images/background2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #080345);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.App {
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .grow {
@@ -19,12 +30,12 @@
   transform: scale(1.4);
 }
 
-/* Pink Light scheme (Default) */
+/* Pink Light scheme (Default)
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   --primary: #ffffff;
-  --primary-hover: #c2185b;
+  --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #fff;
 }
@@ -34,7 +45,7 @@
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --primary: #ffffff;
-    --primary-hover: #e91e63;
+    --primary-hover: #ffdb58;
     --primary-focus: rgba(216, 27, 96, 0.25);
     --primary-inverse: #fff;
   }
@@ -44,7 +55,7 @@
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
   --primary: #ffffff;
-  --primary-hover: #e91e63;
+  --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #fff;
 }

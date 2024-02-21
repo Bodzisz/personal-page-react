@@ -1,4 +1,4 @@
-import "./App.css";
+import classes from "./App.module.css";
 import React from "react";
 import Nav from "./components/Nav/Nav";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <AppShell className="App">
+    <AppShell className={classes.App}>
       <Nav />
       <RouterProvider router={router} />
       <Footer />
