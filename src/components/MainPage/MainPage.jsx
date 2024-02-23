@@ -8,11 +8,11 @@ import { Container, Center } from "@mantine/core";
 
 function MainPage() {
   return (
-    <Container pt={"calc(100vh * 0.2)"} w={"100vw"}>
-      <Center>
+    <Container pt={"calc(100vh * 0.2)"} fluid pl={0} pr={0}>
+      <Center w={"100%"} m={0} p={0}>
         <Welcome />
       </Center>
-      <Center>
+      <Center w={"100%"}>
         <Link activeClass="active" to="about-me-name" spy={true} smooth={true} offset={-70} duration={1000}>
           <MdOutlineKeyboardArrowDown id="down-arrow" size="100" className={classes.downArrow} />
         </Link>

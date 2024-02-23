@@ -5,7 +5,7 @@ import { Anchor, Center, Container, Title } from "@mantine/core";
 
 function AboutMeInfo() {
   return (
-    <Container pb={30}>
+    <Container pb={30} fluid>
       <Center>
         <div>
           <FaJava size="100" />
@@ -21,7 +21,7 @@ function AboutMeInfo() {
       </Center>
       <Container pt={10}>
         <p>
-          I am a Java Fullstack Developer with a passion for software engineering. I am Bachelor of Science in{" "}
+          I am a Java Fullstack Developer with a passion for software engineering and a Bachelor of Science in{" "}
           <b>Applied Computer Science</b> on Wrocław University of Science and Technology.{" "}
           <Anchor href="https://pwr.edu.pl/en/">(WUST)</Anchor>
         </p>

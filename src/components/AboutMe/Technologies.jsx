@@ -20,7 +20,7 @@ function TechnologiesIcons() {
   };
 
   return (
-    <SimpleGrid cols={isMobile ? 1 : 3} verticalSpacing={"xl"} pt={30} pb={50}>
+    <SimpleGrid cols={isMobile ? 1 : 3} verticalSpacing={"xl"} spacing={"xs"} pt={30} pb={50}>
       {withTooltip("Spring", <SiSpring className="grow" size="100" color="#1a751d" />)}
       {withTooltip("Hibernate", <SiHibernate className="grow" size="100" color="#e8b15f" />)}
       {withTooltip("SQL", <AiOutlineConsoleSql className="grow" size="100" color="#d4cfc9" />)}
