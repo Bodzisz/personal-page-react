@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import "./Projects.css";
+import { useMediaQuery } from "@mantine/hooks";
+import { useMantineTheme, SimpleGrid, Center } from "@mantine/core";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   useEffect(() => {
     fetch("/projects.json")
@@ -22,11 +26,13 @@ function Projects() {
   if (hasError) return <div className="center-div">Server Error :(</div>;
 
   return (
-    <div className="cards-grid">
-      {projects.map((project) => (
-        <Card project={project} key={project.id} />
-      ))}
-    </div>
+    <Center pt={30} pb={100}>
+      <SimpleGrid cols={isMobile ? 1 : 3} spacing={"xl"}>
+        {projects.map((project) => (
+          <Card project={project} key={project.id} />
+        ))}
+      </SimpleGrid>
+    </Center>
   );
 }
 

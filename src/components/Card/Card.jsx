@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { Anchor } from "@mantine/core";
 
 function Card({ project }) {
   return (
@@ -12,9 +13,9 @@ function Card({ project }) {
       <div className="card-content">
         <h2 className="card-title">{project.title}</h2>
         <p className="card-body">{project.desc}</p>
-        <a href={project.repo_url} role="button">
+        <Anchor href={project.repo_url} role="button">
           Read More
-        </a>
+        </Anchor>
       </div>
     </div>
   );
