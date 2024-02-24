@@ -1,6 +1,6 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import { Container, Group, Center, Drawer, Burger, createTheme } from "@mantine/core";
+import { Container, Group, Center, Drawer, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 function Nav() {

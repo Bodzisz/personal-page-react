@@ -5,7 +5,7 @@
 }
 
 .App {
-  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background: var(--background-color);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
 }
@@ -38,6 +38,7 @@
   --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #fff;
+  --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
 }
 
 /* Pink Dark scheme (Auto) */
@@ -48,6 +49,7 @@
     --primary-hover: #ffdb58;
     --primary-focus: rgba(216, 27, 96, 0.25);
     --primary-inverse: #fff;
+    --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   }
 }
 
@@ -58,6 +60,7 @@
   --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #fff;
+  --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
 }
 
 /* Pink (Common styles) */
