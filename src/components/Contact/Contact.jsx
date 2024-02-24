@@ -1,45 +1,47 @@
 import React from "react";
 import "./Contact.css";
 import Typewriter from "typewriter-effect";
+import { Button, Center, Container, Input, Textarea, Title } from "@mantine/core";
 
 function Contact() {
   return (
-    <div className="container form-div">
-      <h3>
-        <Typewriter
-          options={{
-            strings: ["Send me an email!"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
-      </h3>
-      <form
-        action="https://formsubmit.co/kacper.wojcicki@protonmail.com"
-        method="POST"
-      >
+    <Container className="form-div" pt={150}>
+      <Center>
+        <Title order={3} pb={10}>
+          <Typewriter
+            options={{
+              strings: ["Send me an email here!"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </Title>
+      </Center>
+      <form action="https://formsubmit.co/kacper.wojcicki@protonmail.com" method="POST">
         <input type="hidden" name="_subject" value="Personal Page Email" />
 
-        <textarea
+        <Textarea
           type="text"
           name="message"
           rows="5"
           placeholder="Type your message"
+          autosize
+          minRows={10}
+          maxRows={20}
+          withAsterisk
           required
+          pb={10}
         />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email address"
-          required
-        />
+        <Input type="email" name="email" placeholder="Your email address" required pb={10} />
 
-        <button type="submit" className="submit-button">
-          Send
-        </button>
+        <Center>
+          <Button type="submit" className="submit-button" w={"100%"}>
+            Send
+          </Button>
+        </Center>
       </form>
-    </div>
+    </Container>
   );
 }
 
