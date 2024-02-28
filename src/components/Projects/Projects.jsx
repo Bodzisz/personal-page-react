@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Card/Card";
 import "./Projects.css";
 import { useMediaQuery } from "@mantine/hooks";
-import { useMantineTheme, SimpleGrid, Center } from "@mantine/core";
+import { useMantineTheme, SimpleGrid, Center, Container } from "@mantine/core";
+import ProjectCard from "../Card/ProjectCard";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -26,13 +26,15 @@ function Projects() {
   if (hasError) return <div className="center-div">Server Error :(</div>;
 
   return (
-    <Center pt={30} pb={100}>
-      <SimpleGrid cols={isMobile ? 1 : 3} spacing={"xl"}>
-        {projects.map((project) => (
-          <Card project={project} key={project.id} />
-        ))}
-      </SimpleGrid>
-    </Center>
+    <Container pt={30} pb={100} size={"xl"}>
+      <Center>
+        <SimpleGrid cols={isMobile ? 1 : 2} verticalSpacing={"xl"} spacing={"xl"}>
+          {projects.map((project) => (
+            <ProjectCard project={project} isMobile={isMobile} key={project.id} />
+          ))}
+        </SimpleGrid>
+      </Center>
+    </Container>
   );
 }
 

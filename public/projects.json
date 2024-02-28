@@ -1,51 +1,58 @@
 [
-    {
-        "id": 1,
-        "title": "My Post Board",
-        "desc": "Post and comments full-stack CRUD project. Includes users registration and login.Data is saved to relational database.",
-        "image": "post-board.jpg",
-        "repo_url": "https://github.com/Bodzisz/myBoard"
-    },
-    {
-        "id": 2,
-        "title": "Table Reservation",
-        "desc": "REST API for table reservation in restaurant. Reservation is confirmed via email and kept in database.",
-        "image": "restaurant.jpg",
-        "repo_url": "https://github.com/Bodzisz/Rekrutacja"
-    },
-    {
-        "id": 3,
-        "title": "Codewars Java",
-        "desc": "Codewars katas solutions written in Java for multiple problems and algorithms to solve/implement with appropriate complexity",
-        "image": "codewars.jpg",
-        "repo_url": "https://github.com/Bodzisz/CodewarsJavaSolutions"
-    },
-    {
-        "id": 4,
-        "title": "Effects of Alcohol",
-        "desc": "Data anylisis project. Shows effects of alcohol on life factors using linear and polynominal regression on the plots",
-        "image": "alcohol.jpg",
-        "repo_url": "https://github.com/Bodzisz/Alcohol-Influence-On-Life-Factors"
-    },
-    {
-        "id": 5,
-        "title": "Daddy Jokes",
-        "desc": "Jokes CRUD website created using python (Flask) with MongoDB and SqlLite, user authentication and authorization",
-        "image": "daddy-jokes-image.jpg",
-        "repo_url": "https://github.com/Bodzisz/Daddy-Jokes"
-    },
-    {
-        "id": 6,
-        "title": "DrinkFinder",
-        "desc": "Android app where users can search for drinks with preparation instrucitons by selecting their ingredients",
-        "image": "drinkfinder-img.jpeg",
-        "repo_url": "https://github.com/Bodzisz/DrinkFinder"
-    },
-    {
-        "id": 7,
-        "title": "Presence Checker",
-        "desc": "IoT system that helps teacher checking students presence in classes by applying RFID card to the reader",
-        "image": "presence-checker-img.jpeg",
-        "repo_url": "https://github.com/Bodzisz/ioT-StudentPresenceChecker"
-    }
+  {
+    "id": 2,
+    "title": "Table Reservation",
+    "desc": "REST API for table reservation in restaurant. Reservation is confirmed via email and kept in database.",
+    "image": "restaurant.jpg",
+    "repo_url": "https://github.com/Bodzisz/Rekrutacja",
+    "technologies": ["Java", "Spring", "Spring Boot", "REST API"]
+  },
+  {
+    "id": 7,
+    "title": "Presence Checker",
+    "desc": "IoT system that helps teacher checking students presence in classes by applying RFID card to the reader",
+    "image": "presence-checker-img.jpeg",
+    "repo_url": "https://github.com/Bodzisz/ioT-StudentPresenceChecker",
+    "technologies": ["IoT", "Java", "Spring Boot", "RFID", "MQTT"]
+  },
+  {
+    "id": 3,
+    "title": "Codewars Java",
+    "desc": "Codewars katas solutions written in Java for multiple problems and algorithms to solve/implement with appropriate complexity",
+    "image": "codewars.jpg",
+    "repo_url": "https://github.com/Bodzisz/CodewarsJavaSolutions",
+    "technologies": ["Java"]
+  },
+  {
+    "id": 4,
+    "title": "Effects of Alcohol",
+    "desc": "Data anylisis project. Shows effects of alcohol on life factors using linear and polynominal regression on the plots",
+    "image": "alcohol.jpg",
+    "repo_url": "https://github.com/Bodzisz/Alcohol-Influence-On-Life-Factors",
+    "technologies": ["Python", "Data analysis"]
+  },
+  {
+    "id": 5,
+    "title": "Daddy Jokes",
+    "desc": "Jokes CRUD website created using python (Flask) with MongoDB and SqlLite, user authentication and authorization",
+    "image": "daddy-jokes-image.jpg",
+    "repo_url": "https://github.com/Bodzisz/Daddy-Jokes",
+    "technologies": ["Python", "Flask", "MongoDB"]
+  },
+  {
+    "id": 6,
+    "title": "DrinkFinder",
+    "desc": "Android app where users can search for drinks with preparation instrucitons by selecting their ingredients",
+    "image": "drinkfinder-img.jpeg",
+    "repo_url": "https://github.com/Bodzisz/DrinkFinder",
+    "technologies": ["Android", "Mobile"]
+  },
+  {
+    "id": 1,
+    "title": "My Post Board",
+    "desc": "Post and comments full-stack CRUD project. Includes users registration and login.Data is saved to relational database.",
+    "image": "post-board.jpg",
+    "repo_url": "https://github.com/Bodzisz/myBoard",
+    "technologies": ["Java", "Spring Boot", "Thymeleaf", "HTML", "CSS", "MySQL"]
+  }
 ]
