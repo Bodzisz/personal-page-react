@@ -1,0 +1,19 @@
+.contactLink {
+  border: 2px solid var(--primary-inverse);
+  border-radius: 7px;
+  color: var(--primary-inverse);
+
+  @mixin hover {
+    border: 2px solid var(--primary-hover);
+    transform: scale(1.1);
+    color: var(--primary-hover);
+  }
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.4);
+}
