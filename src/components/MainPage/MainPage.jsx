@@ -5,6 +5,7 @@ import classes from "./MainPage.module.css";
 import AboutMe from "../AboutMe/AboutMe";
 import { Link } from "react-scroll";
 import { Container, Center } from "@mantine/core";
+import BlogSubscriptionCard from "./BlogSubscriptionCard";
 
 function MainPage() {
   return (
@@ -16,6 +17,9 @@ function MainPage() {
         <Link activeClass="active" to="about-me-name" spy={true} smooth={true} offset={-70} duration={1000}>
           <MdOutlineKeyboardArrowDown id="down-arrow" size="100" className={classes.downArrow} />
         </Link>
+      </Center>
+      <Center w={"100%"} pt={20}>
+        <BlogSubscriptionCard />
       </Center>
       <AboutMe />
     </Container>
