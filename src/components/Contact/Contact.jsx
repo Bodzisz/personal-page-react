@@ -1,7 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import classes from "./Contact.module.css";
-import { BsGithub, BsTwitter, BsLinkedin, BsMedium } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { Button, Center, Container, Group, Input, Textarea, Title, Text } from "@mantine/core";
 import ContactLink from "./ContactLink";
 
@@ -75,7 +74,7 @@ function Contact() {
           icon={<BsLinkedin size={iconSize} />}
           name={"LinkedIn"}
         />
-        <ContactLink link="https://x.com/kacpersoftware" icon={<BsTwitter size={iconSize} />} name={"X / Twitter"} />
+        <ContactLink link="https://x.com/kacpersoftware" icon={<BsTwitterX size={iconSize} />} name={"X /Twitter"} />
         <ContactLink link="https://medium.com/@kacper_wojcicki" icon={<BsMedium size={iconSize} />} name={"Medium"} />
       </Container>
     );

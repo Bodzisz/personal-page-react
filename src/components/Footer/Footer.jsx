@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Footer.module.css";
-import { BsGithub, BsTwitter, BsLinkedin, BsMedium } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { Anchor, Group, Container } from "@mantine/core";
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
       <Group display={"flex"} justify="center">
         <Container className={classes.social} pt={20}>
           <Anchor href="https://x.com/kacpersoftware" underline="never" className={classes.hover}>
-            <BsTwitter />
+            <BsTwitterX />
           </Anchor>
         </Container>
         <Container className={classes.social} pt={20}>
