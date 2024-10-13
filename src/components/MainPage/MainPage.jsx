@@ -5,7 +5,7 @@ import classes from "./MainPage.module.css";
 import AboutMe from "../AboutMe/AboutMe";
 import { Link } from "react-scroll";
 import { Container, Center } from "@mantine/core";
-import BlogSubscriptionCard from "./BlogSubscriptionCard";
+import NewsletterSubscriptionCard from "./NewsletterSubscriptionCard";
 
 function MainPage() {
   return (
@@ -19,7 +19,7 @@ function MainPage() {
         </Link>
       </Center>
       <Center w={"100%"} pt={20}>
-        <BlogSubscriptionCard />
+        <NewsletterSubscriptionCard />
       </Center>
       <AboutMe />
     </Container>

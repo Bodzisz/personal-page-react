@@ -1,8 +1,8 @@
-import { Card, Text, Button, Center, Anchor, Group, useMantineTheme } from "@mantine/core";
-import { BsMedium } from "react-icons/bs";
+import { Card, Text, Button, Center, Anchor, Group, useMantineTheme, Image } from "@mantine/core";
+import { BsMedium, BsNewspaper } from "react-icons/bs";
 import { useMediaQuery } from "@mantine/hooks";
 
-const BlogSubscriptionCard = () => {
+const NewsletterSubscriptionCard = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
@@ -16,22 +16,22 @@ const BlogSubscriptionCard = () => {
       style={{ background: "rgba(0, 0, 0, 0.3)" }}
     >
       <Center>
-        <BsMedium size={30} />
+        <Image src={"../../images/newsletter_logo.png"} h={100} w={100} style={{ borderRadius: "10px" }} />
       </Center>
       <Center>
         <Group>
-          <h2 fw={500}>Get an email whenever I post</h2>
+          <h2 fw={500}>Kacper Does Software Newsletter!</h2>
         </Group>
       </Center>
 
       <Center>
         <Text size="md">
-          I run my blog on Medium. I write about software enginnering, clean code, java, productivity and much more.
-          Don't miss any of my articles!
+          Do you want to get monthly software engineering updates and technical and soft skills knowledge? Subscribe to
+          my monthly newsletter 👇
         </Text>
       </Center>
 
-      <Anchor href="https://medium.com/@kacper_wojcicki/subscribe">
+      <Anchor href="https://kacper-does-software.beehiiv.com/subscribe">
         <Button fullWidth mt="md" radius="md">
           Subscribe for free
         </Button>
@@ -40,4 +40,4 @@ const BlogSubscriptionCard = () => {
   );
 };
 
-export default BlogSubscriptionCard;
+export default NewsletterSubscriptionCard;
