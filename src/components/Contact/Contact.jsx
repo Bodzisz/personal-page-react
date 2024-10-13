@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { BsGithub, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { Button, Center, Container, Group, Input, Textarea, Title, Text } from "@mantine/core";
 import ContactLink from "./ContactLink";
 
@@ -54,8 +54,7 @@ function Contact() {
 
           <Center pt={15} pb={30}>
             <Group>
-              <Text>Or write me directly at </Text>{" "}
-              <Text c={"var(--primary-hover)"}>kacper.wojcicki@protonmail.com</Text>
+              <Text>Or write me directly at </Text> <Text c={"var(--primary-hover)"}>kacperdoessoftware@gmail.com</Text>
             </Group>
           </Center>
         </Container>
@@ -76,6 +75,11 @@ function Contact() {
         />
         <ContactLink link="https://x.com/kacpersoftware" icon={<BsTwitterX size={iconSize} />} name={"X /Twitter"} />
         <ContactLink link="https://medium.com/@kacper_wojcicki" icon={<BsMedium size={iconSize} />} name={"Medium"} />
+        <ContactLink
+          link="https://www.instagram.com/kacper_software"
+          icon={<BsInstagram size={iconSize} />}
+          name={"Instagram"}
+        />
       </Container>
     );
   };

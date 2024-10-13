@@ -1,5 +1,5 @@
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   right: 0;
@@ -22,6 +22,14 @@
 
 .social {
   margin: 0 10px 0 10px;
+
+  @mixin hover {
+    transform: scale(1.4);
+  }
+}
+
+.socialMobile {
+  margin: 0 5px 0 5px;
 
   @mixin hover {
     transform: scale(1.4);
