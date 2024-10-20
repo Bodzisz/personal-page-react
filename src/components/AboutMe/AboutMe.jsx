@@ -9,13 +9,13 @@ import { Center, Container } from "@mantine/core";
 function AboutMe() {
   return (
     <Container
-      mt={"100vh"}
-      pt={"20vh"}
+      mt={"50px"}
       pb={"calc(0.2 * 100vh)"}
       id="about-me"
       fluid
       pl={0}
       pr={0}
+      mih={"100vh"}
       style={{ background: "rgba(0, 0, 0, 0.3)" }}
     >
       <Container pt={50} fluid>

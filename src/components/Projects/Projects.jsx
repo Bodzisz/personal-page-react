@@ -26,7 +26,7 @@ function Projects() {
   if (hasError) return <div className="center-div">Server Error :(</div>;
 
   return (
-    <Container pt={30} pb={100} size={"xl"}>
+    <Container mt={0} mb={100} size={"xl"}>
       <Center>
         <SimpleGrid cols={isMobile ? 1 : 2} verticalSpacing={"xl"} spacing={"xl"}>
           {projects.map((project) => (

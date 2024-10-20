@@ -1,12 +1,12 @@
 .App {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #080345);
-  background-size: 400% 400%;
+  background-size: 100vh;
   animation: gradient 15s ease infinite;
 }
 
 .App {
   background: var(--background-color);
-  background-size: 180% 180%;
+  /* background-size: 180% 180%; */
   animation: gradient-animation 18s ease infinite;
 }
 
