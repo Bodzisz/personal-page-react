@@ -32,9 +32,11 @@ const NewsletterSubscriptionCard = () => {
       </Center>
 
       <Anchor href="https://kacper-does-software.beehiiv.com/subscribe">
-        <Button fullWidth mt="md" radius="md">
-          Subscribe for free
-        </Button>
+        <Center>
+          <Button fullWidth mt="md" radius="md" maw={300}>
+            Subscribe for free
+          </Button>
+        </Center>
       </Anchor>
     </Card>
   );
