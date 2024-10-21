@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import AboutMeInfo from "./AboutMeInfo";
 import TechnologiesIcons from "./Technologies";
 import { Center, Container } from "@mantine/core";
+import ScrollAnimation from "react-animate-on-scroll";
 
 function AboutMe() {
   return (
@@ -20,10 +21,12 @@ function AboutMe() {
     >
       <Container pt={50} fluid>
         <Container p={30} fluid>
-          <AboutMeInfo />
-          <Container size={"xl"}>
-            <TechnologiesIcons />
-          </Container>
+          <ScrollAnimation animateIn="fadeIn">
+            <AboutMeInfo />
+            <Container size={"xl"}>
+              <TechnologiesIcons />
+            </Container>
+          </ScrollAnimation>
         </Container>
         <Center>
           <Link activeClass="active" to="nav" spy={true} smooth={true} offset={-70} duration={1000}>

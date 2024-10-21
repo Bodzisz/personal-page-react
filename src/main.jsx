@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "@mantine/core/styles.css";
+import "animate.css/animate.compat.css";
 import App from "./App";
 import { MantineProvider, createTheme } from "@mantine/core";
 
