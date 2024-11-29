@@ -11,9 +11,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 function MainPage() {
   return (
     <Container mt={"100px"} fluid pl={0} pr={0}>
-      <BackgroundImage src="/images/waves/mainPageWaveDown.svg">
-        <ScrollAnimation animateIn="fadeIn" initiallyVisible={true} animateOnce={true}>
-          <Container mih={"100vh"} fluid>
+      <ScrollAnimation animateIn="fadeIn" initiallyVisible={true} animateOnce={true}>
+        <BackgroundImage src="/images/waves/mainPageWaveDown.svg">
+          <Container pb={400} fluid>
             <Center w={"100%"} m={0} p={0}>
               <Welcome />
             </Center>
@@ -26,8 +26,8 @@ function MainPage() {
               <NewsletterSubscriptionCard />
             </Center>
           </Container>
-        </ScrollAnimation>
-      </BackgroundImage>
+        </BackgroundImage>
+      </ScrollAnimation>
       <AboutMe />
     </Container>
   );
