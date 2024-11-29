@@ -20,7 +20,7 @@
 
 /* Pink Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
+/* @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --primary: #ffffff;
     --primary-hover: #ffdb58;
@@ -29,32 +29,37 @@
     --background-color: #001220;
     --mantine-color-body: var(--background-color);
   }
-}
+} */
 
-[data-theme="light"] {
+:root[data-mantine-color-scheme="light"] {
   --primary: #ffffff;
-  --primary-hover: #ffdb58;
+  --primary-hover: #c4a81a;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #fff;
-  --background-color: #d3d3c6;
-  --mantine-color-body: #d3d3c6;
+  --background-color: var(--mantine-color-white);
+  --mantine-color-body: var(--mantine-color-white);
+  --mantine-color-text: var(--mantine-color-black);
 }
 
-/* Pink Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
+:root[data-mantine-color-scheme="dark"] {
   --primary: #ffffff;
-  --primary-hover: #ffdb58;
+  --primary-hover: #c4a81a;
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #fff;
-  --background-color: #001220;
-  --mantine-color-body: var(--background-color);
+  --background-color: var(--mantine-color-black);
+  --mantine-color-body: var(--mantine-color-black);
 }
 
-/* Pink (Common styles) */
 :root {
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
+  --primary: #ffffff;
+  --primary-hover: #c4a81a;
+  --primary-focus: rgba(216, 27, 96, 0.25);
+  --primary-inverse: #fff;
+  --mantine-color-black: #001220;
+  --mantine-color-white: #f4f0ec;
 }

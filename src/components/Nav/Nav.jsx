@@ -1,26 +1,32 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import { Container, Group, Center, Drawer, Burger, BackgroundImage } from "@mantine/core";
+import { Container, Group, Center, Drawer, Burger, BackgroundImage, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { LightModeSwitchButton } from "./LightModeSwitchButton";
 
 function Nav() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   const getNavOptions = () => {
     return (
-      <Center pt={50} pb={200} visibleFrom="sm">
-        <Group gap={80}>
-          <a href="/" className={classes.link}>
-            <span>Home</span>
-          </a>
-          <a href="/projects" className={classes.link}>
-            <span>Projects</span>
-          </a>
-          <a href="/contact" className={classes.link}>
-            <span>Contact</span>
-          </a>
-        </Group>
-      </Center>
+      <Container fluid visibleFrom="sm" pt={50} pb={200}>
+        <Center>
+          <Group gap={80}>
+            <a href="/" className={classes.link}>
+              <span>Home</span>
+            </a>
+            <a href="/projects" className={classes.link}>
+              <span>Projects</span>
+            </a>
+            <a href="/contact" className={classes.link}>
+              <span>Contact</span>
+            </a>
+          </Group>
+        </Center>
+        <Container pos={"absolute"} right={40} top={40}>
+          <LightModeSwitchButton />
+        </Container>
+      </Container>
     );
   };
 
@@ -38,6 +44,9 @@ function Nav() {
       >
         <BackgroundImage src="/images/waves/mobileNavWave.svg" h={"calc(100vh - 60px)"}>
           <Drawer.Body pl={0} ml={0}>
+            <Center>
+              <LightModeSwitchButton />
+            </Center>
             <Group h="100%" gap={80} pt={"20vh"}>
               <a href="/" className={classes.link}>
                 <span>Home</span>
@@ -59,7 +68,15 @@ function Nav() {
     <BackgroundImage src="/images/waves/navWave.svg">
       <Container id="nav">
         {getNavOptions()}
-        <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" pt={50} pb={150} size={40} />
+        <Burger
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+          color="var(--mantine-color-white)"
+          hiddenFrom="sm"
+          pt={50}
+          pb={150}
+          size={40}
+        />
         {getMobileNavOptions()}
       </Container>
     </BackgroundImage>

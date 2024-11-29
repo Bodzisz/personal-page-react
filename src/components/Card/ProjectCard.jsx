@@ -42,7 +42,7 @@ function ProjectCard({ project, isMobile }) {
         className={classes.cardBackground}
       >
         <Card.Section pos={"absolute"} bottom={0} bg={"rgba(0, 0, 0, 0.6)"} w={"100%"} pb={20} pt={10}>
-          <Center pb={isMobile ? 10 : 30} pt={10}>
+          <Center pb={isMobile ? 10 : 30} pt={10} c={"var(--mantine-color-white)"}>
             <Title order={3}>{project.title}</Title>
           </Center>
 
@@ -68,7 +68,12 @@ function ProjectCard({ project, isMobile }) {
                 </Center>
               </ScrollArea>
 
-              <ScrollArea w={cardDimensions.width - 40} h={isMobile ? 120 : 270} scrollbars="y">
+              <ScrollArea
+                w={cardDimensions.width - 40}
+                h={isMobile ? 120 : 270}
+                scrollbars="y"
+                c={"var(--mantine-color-white)"}
+              >
                 {project.desc}
               </ScrollArea>
 
@@ -83,25 +88,6 @@ function ProjectCard({ project, isMobile }) {
       </BackgroundImage>
     </Card>
   );
-
-  const oldCard = () => {
-    return (
-      <div
-        className="card"
-        style={{
-          backgroundImage: `url(/images/${project.image})`,
-        }}
-      >
-        <div className="card-content">
-          <h2 className="card-title">{project.title}</h2>
-          <p className="card-body">{project.desc}</p>
-          <Anchor href={project.repo_url} role="button">
-            Read More
-          </Anchor>
-        </div>
-      </div>
-    );
-  };
 }
 
 export default ProjectCard;

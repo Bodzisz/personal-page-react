@@ -1,4 +1,4 @@
-import { Card, Text, Button, Center, Anchor, Group, useMantineTheme, Image } from "@mantine/core";
+import { Card, Text, Button, Center, Anchor, Group, useMantineTheme, Image, Title } from "@mantine/core";
 import { BsMedium, BsNewspaper } from "react-icons/bs";
 import { useMediaQuery } from "@mantine/hooks";
 
@@ -13,19 +13,21 @@ const NewsletterSubscriptionCard = () => {
       padding="lg"
       radius="md"
       withBorder
-      style={{ background: "rgba(0, 0, 0, 0.3)" }}
+      style={{ background: "rgba(0, 0, 0, 0.5)" }}
     >
       <Center>
         <Image src={"../../images/newsletter_logo.png"} h={100} w={100} style={{ borderRadius: "10px" }} />
       </Center>
       <Center>
         <Group>
-          <h2 fw={500}>Kacper Does Software Newsletter!</h2>
+          <Title pb={20} fw={500} c={"var(--mantine-color-white)"}>
+            Kacper Does Software Newsletter!
+          </Title>
         </Group>
       </Center>
 
-      <Center>
-        <Text size="md">
+      <Center pb={10}>
+        <Text size="md" c={"var(--mantine-color-white)"} style={{ textAlign: "center" }}>
           Do you want to get monthly software engineering updates and technical and soft skills knowledge? Subscribe to
           my monthly newsletter 👇
         </Text>

@@ -7,10 +7,10 @@ import ContactLink from "./ContactLink";
 function Contact() {
   const getEmailContactForm = () => {
     return (
-      <Container miw={"40%"}>
+      <Container miw={"40%"} bg={"rgba(0, 0, 0, 0.5)"} p={50} style={{ borderRadius: "20px" }}>
         <Container>
           <Center>
-            <Title order={3} pb={10}>
+            <Title order={3} pb={10} c={"var(--mantine-color-white)"}>
               <Typewriter
                 options={{
                   strings: ["Send me an email here!"],
@@ -54,7 +54,8 @@ function Contact() {
 
           <Center pt={15} pb={30}>
             <Group>
-              <Text>Or write me directly at </Text> <Text c={"var(--primary-hover)"}>kacperdoessoftware@gmail.com</Text>
+              <Text c={"var(--mantine-color-white)"}>Or write me directly at </Text>{" "}
+              <Text c={"var(--primary-hover)"}>kacperdoessoftware@gmail.com</Text>
             </Group>
           </Center>
         </Container>
@@ -86,7 +87,7 @@ function Contact() {
 
   return (
     <Container mih={"calc(100vh - 90px)"} pt={"calc(0.05 * 100vh)"} size={"xl"} pb={100}>
-      <Group bg={"rgba(0, 0, 0, 0.3)"} p={50} style={{ borderRadius: "20px" }} mb={100}>
+      <Group mb={100}>
         {getContactLinks()}
         {getEmailContactForm()}
       </Group>

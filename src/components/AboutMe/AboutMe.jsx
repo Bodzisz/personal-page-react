@@ -10,7 +10,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 function AboutMe() {
   return (
     <Container pb={30} id="about-me" fluid pl={0} pr={0} mr={0} ml={0} mih={"100vh"}>
-      <Container pt={50} pr={30} pl={30} fluid style={{ backgroundColor: "#3e277b" }}>
+      <Container pt={50} pb={70} pr={30} pl={30} fluid style={{ backgroundColor: "#3e277b" }}>
         <ScrollAnimation animateIn="fadeIn">
           <AboutMeInfo />
         </ScrollAnimation>

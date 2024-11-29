@@ -1,10 +1,10 @@
 .contactLink {
-  border: 2px solid var(--primary-inverse);
+  border: 2px solid light-dark(var(--mantine-color-black), var(--mantine-color-white));
   border-radius: 7px;
-  color: var(--primary-inverse);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 
   @mixin hover {
-    border: 2px solid var(--primary-hover);
+    border: 2px solid light-dark(var(--primary-hover), var(--primary-hover));
     transform: scale(1.1);
     color: var(--primary-hover);
   }
