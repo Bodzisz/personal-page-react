@@ -15,13 +15,9 @@ function AboutMe() {
           <AboutMeInfo />
         </ScrollAnimation>
       </Container>
-      <BackgroundImage src="/images/waves/aboutMeWaveUp.svg">
-        <Container pt={"calc(0.3 * 100vh)"} fluid>
-          <ScrollAnimation animateIn="fadeIn">
-            <Container size={"xl"}>
-              <TechnologiesIcons />
-            </Container>
-          </ScrollAnimation>
+      <BackgroundImage src="/images/waves/aboutMeWaveUp.svg" fluid pr={0} mr={0}>
+        <Container pt={"calc(0.3 * 100vh)"} mr={0} pr={0} ml={0} pl={0} fluid>
+          <TechnologiesIcons />
         </Container>
       </BackgroundImage>
       <Center>

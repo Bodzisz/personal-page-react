@@ -1,36 +1,272 @@
-import React, { useEffect, useState } from "react";
-import { SiSpring, SiHibernate, SiReact, SiDocker, SiPython, SiHtml5, SiGit } from "react-icons/si";
-import { AiOutlineConsoleSql } from "react-icons/ai";
-import { FcLinux } from "react-icons/fc";
-import { SimpleGrid, Tooltip, useMantineTheme, Container, TooltipFloating } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import "./Technologies.css";
+import { Noise } from "noisejs";
+import React, { useRef } from "react";
+import { BackgroundImage, Container } from "@mantine/core";
+
+const bubbles = [
+  {
+    s: 0.6,
+    x: 1134,
+    y: 45,
+  },
+  {
+    s: 0.6,
+    x: 1620,
+    y: 271,
+  },
+  {
+    s: 0.6,
+    x: 1761,
+    y: 372,
+  },
+  {
+    s: 0.6,
+    x: 2499,
+    y: 79,
+  },
+  {
+    s: 0.8,
+    x: 2704,
+    y: 334,
+  },
+  {
+    s: 0.6,
+    x: 2271,
+    y: 356,
+  },
+  {
+    s: 0.6,
+    x: 795,
+    y: 226,
+  },
+  {
+    s: 0.6,
+    x: 276,
+    y: 256,
+  },
+  {
+    s: 0.6,
+    x: 1210,
+    y: 365,
+  },
+  {
+    s: 0.6,
+    x: 444,
+    y: 193,
+  },
+  {
+    s: 0.6,
+    x: 2545,
+    y: 387,
+  },
+  {
+    s: 0.8,
+    x: 1303,
+    y: 193,
+  },
+  {
+    s: 0.8,
+    x: 907,
+    y: 88,
+  },
+  {
+    s: 0.8,
+    x: 633,
+    y: 320,
+  },
+  {
+    s: 0.8,
+    x: 323,
+    y: 60,
+  },
+  {
+    s: 0.8,
+    x: 129,
+    y: 357,
+  },
+  {
+    s: 0.8,
+    x: 1440,
+    y: 342,
+  },
+  {
+    s: 0.8,
+    x: 1929,
+    y: 293,
+  },
+  {
+    s: 0.8,
+    x: 2135,
+    y: 198,
+  },
+  {
+    s: 0.8,
+    x: 2276,
+    y: 82,
+  },
+  {
+    s: 0.8,
+    x: 2654,
+    y: 182,
+  },
+  {
+    s: 0.8,
+    x: 2783,
+    y: 60,
+  },
+  {
+    s: 1.0,
+    x: 1519,
+    y: 118,
+  },
+  {
+    s: 1.0,
+    x: 1071,
+    y: 233,
+  },
+  {
+    s: 1.0,
+    x: 1773,
+    y: 148,
+  },
+  {
+    s: 1.0,
+    x: 2098,
+    y: 385,
+  },
+  {
+    s: 1.0,
+    x: 2423,
+    y: 244,
+  },
+  {
+    s: 1.0,
+    x: 901,
+    y: 385,
+  },
+  {
+    s: 1.0,
+    x: 624,
+    y: 111,
+  },
+  {
+    s: 1.0,
+    x: 75,
+    y: 103,
+  },
+  {
+    s: 1.0,
+    x: 413,
+    y: 367,
+  },
+  {
+    s: 1.0,
+    x: 2895,
+    y: 271,
+  },
+  {
+    s: 1.0,
+    x: 1990,
+    y: 75,
+  },
+];
+
+const backgroundPositions = [];
+
+for (let i = 0; i < 7; i++) {
+  for (let j = 0; j < 7; j++) {
+    backgroundPositions.push(`${-154 * j}px ${-154 * i}px`);
+  }
+}
+
+const CANVAS_WIDTH = 3000;
+// The amplitude. The amount the noise affects the movement.
+const NOISE_AMOUNT = 5;
+// The frequency. Smaller for flat slopes, higher for jagged spikes.
+const NOISE_SPEED = 0.004;
+// Pixels to move per frame. At 60fps, this would be 18px a sec.
+const SCROLL_SPEED = 0.3;
+
+const noise = new Noise();
 
 function TechnologiesIcons() {
-  const theme = useMantineTheme();
-  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  const animationRef = useRef();
+  const bubblesRef = useRef(
+    bubbles.map((bubble) => ({
+      ...bubble,
+      noiseSeedX: Math.floor(Math.random() * 64000),
+      noiseSeedY: Math.floor(Math.random() * 64000),
+      xWithNoise: bubble.x,
+      yWithNoise: bubble.y,
+    }))
+  );
 
-  const tooltipEvents = { hover: true, focus: false, touch: true };
+  const [isReady, setReady] = React.useState(false);
 
-  const withTooltip = (label, children) => {
-    return (
-      <Tooltip label={label} offset={30} events={tooltipEvents}>
-        <Container>{children}</Container>
-      </Tooltip>
-    );
-  };
+  React.useEffect(() => {
+    setTimeout(() => {
+      setReady(true);
+    }, 200);
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
+
+  function animate() {
+    bubblesRef.current = bubblesRef.current.map((bubble, index) => {
+      const newNoiseSeedX = bubble.noiseSeedX + NOISE_SPEED;
+      const newNoiseSeedY = bubble.noiseSeedY + NOISE_SPEED;
+
+      const randomX = noise.simplex2(newNoiseSeedX, 0);
+      const randomY = noise.simplex2(newNoiseSeedY, 0);
+
+      const newX = bubble.x - SCROLL_SPEED;
+
+      const newXWithNoise = newX + randomX * NOISE_AMOUNT;
+      const newYWithNoise = bubble.y + randomY * NOISE_AMOUNT;
+
+      const element = document.getElementById(`bubble-${index}`);
+
+      if (element) {
+        element.style.transform = `translate(${newXWithNoise}px, ${newYWithNoise}px) scale(${bubble.s})`;
+      }
+
+      return {
+        ...bubble,
+        noiseSeedX: newNoiseSeedX,
+        noiseSeedY: newNoiseSeedY,
+        x: newX < -200 ? CANVAS_WIDTH : newX,
+        xWithNoise: newXWithNoise,
+        yWithNoise: newYWithNoise,
+      };
+    });
+
+    animationRef.current = requestAnimationFrame(animate);
+  }
 
   return (
-    <SimpleGrid cols={isMobile ? 1 : 3} verticalSpacing={"xl"} spacing={"xs"} pt={30} pb={50}>
-      {withTooltip("Spring", <SiSpring className="grow" size="100" color="#1a751d" />)}
-      {withTooltip("Hibernate", <SiHibernate className="grow" size="100" color="#e8b15f" />)}
-      {withTooltip("SQL", <AiOutlineConsoleSql className="grow" size="100" color="#d4cfc9" />)}
-      {withTooltip("React", <SiReact className="grow" size="100" color="#2e92f0" />)}
-      {withTooltip("Linux", <FcLinux className="grow" size="100" />)}
-      {withTooltip("Docker", <SiDocker className="grow" size="100" color="#0e6bc2" />)}
-      {withTooltip("HTML", <SiHtml5 className="grow" size="100" color="#eb9307" />)}
-      {withTooltip("Python", <SiPython className="grow" size="100" color="#a39b03" />)}
-      {withTooltip("Git", <SiGit className="grow" size="100" color="#e34e34" />)}
-    </SimpleGrid>
+    <Container fluid className="bubbles-wrapper" pr={0} mr={0} pl={0} ml={0}>
+      <div className="bubbles">
+        {bubbles.map((bubble, index) => (
+          <BackgroundImage
+            src="/images/stripes.png"
+            className="bubble"
+            id={`bubble-${index}`}
+            key={`${bubble.x} ${bubble.y}`}
+            style={{
+              backgroundPosition: backgroundPositions[index],
+              opacity: isReady ? 1 : 0,
+              transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
+            }}
+          />
+        ))}
+      </div>
+    </Container>
   );
 }
 

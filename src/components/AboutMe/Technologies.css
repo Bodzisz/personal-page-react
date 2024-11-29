@@ -1,0 +1,24 @@
+.bubble {
+  background-color: white;
+  background-size: 1076px 1076px;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
+  height: 152px;
+  position: absolute;
+  transition: opacity ease-in-out 1s;
+  width: 152px;
+}
+
+.bubbles {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbles-wrapper {
+  /* background-color: salmon; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
