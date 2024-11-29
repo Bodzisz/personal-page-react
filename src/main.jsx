@@ -9,6 +9,7 @@ import { MantineProvider, createTheme } from "@mantine/core";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const theme = createTheme({
+  colorScheme: "dark",
   primaryColor: "yellow",
   colors: {
     "bright-pink": [

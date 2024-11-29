@@ -4,36 +4,31 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { Link } from "react-scroll";
 import AboutMeInfo from "./AboutMeInfo";
 import TechnologiesIcons from "./Technologies";
-import { Center, Container } from "@mantine/core";
+import { BackgroundImage, Center, Container, Image } from "@mantine/core";
 import ScrollAnimation from "react-animate-on-scroll";
 
 function AboutMe() {
   return (
-    <Container
-      mt={"50px"}
-      pb={"calc(0.2 * 100vh)"}
-      id="about-me"
-      fluid
-      pl={0}
-      pr={0}
-      mih={"100vh"}
-      style={{ background: "rgba(0, 0, 0, 0.3)" }}
-    >
-      <Container pt={50} fluid>
-        <Container p={30} fluid>
+    <Container pb={30} id="about-me" fluid pl={0} pr={0} mr={0} ml={0} mih={"100vh"}>
+      <Container pt={50} pr={30} pl={30} fluid style={{ backgroundColor: "#3e277b" }}>
+        <ScrollAnimation animateIn="fadeIn">
+          <AboutMeInfo />
+        </ScrollAnimation>
+      </Container>
+      <BackgroundImage src="/images/waves/aboutMeWaveUp.svg">
+        <Container pt={"calc(0.3 * 100vh)"} fluid>
           <ScrollAnimation animateIn="fadeIn">
-            <AboutMeInfo />
             <Container size={"xl"}>
               <TechnologiesIcons />
             </Container>
           </ScrollAnimation>
         </Container>
-        <Center>
-          <Link activeClass="active" to="nav" spy={true} smooth={true} offset={-70} duration={1000}>
-            <MdOutlineKeyboardArrowUp className={classes.upArrow} size="100" id="up-arrow" />
-          </Link>
-        </Center>
-      </Container>
+      </BackgroundImage>
+      <Center>
+        <Link activeClass="active" to="nav" spy={true} smooth={true} offset={-70} duration={1000}>
+          <MdOutlineKeyboardArrowUp className={classes.upArrow} size="100" id="up-arrow" />
+        </Link>
+      </Center>
     </Container>
   );
 }

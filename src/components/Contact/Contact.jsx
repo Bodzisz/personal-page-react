@@ -86,7 +86,7 @@ function Contact() {
 
   return (
     <Container mih={"calc(100vh - 90px)"} pt={"calc(0.05 * 100vh)"} size={"xl"} pb={100}>
-      <Group bg={"rgba(0, 0, 0, 0.6)"} p={50} style={{ borderRadius: "20px" }} mb={100}>
+      <Group bg={"rgba(0, 0, 0, 0.3)"} p={50} style={{ borderRadius: "20px" }} mb={100}>
         {getContactLinks()}
         {getEmailContactForm()}
       </Group>

@@ -1,27 +1,3 @@
-.App {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #080345);
-  background-size: 100vh;
-  animation: gradient 15s ease infinite;
-}
-
-.App {
-  background: var(--background-color);
-  /* background-size: 180% 180%; */
-  animation: gradient-animation 18s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .grow {
   transition: all 0.2s ease-in-out;
 }
@@ -32,14 +8,15 @@
 
 /* Pink Light scheme (Default)
 /* Can be forced with data-theme="light" */
-[data-theme="light"],
+/* [data-theme="light"],
 :root:not([data-theme="dark"]) {
   --primary: #ffffff;
   --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #fff;
-  --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
-}
+  --background-color: #d3d3c6;
+  --mantine-color-body: #d3d3c6;
+} */
 
 /* Pink Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
@@ -49,8 +26,18 @@
     --primary-hover: #ffdb58;
     --primary-focus: rgba(216, 27, 96, 0.25);
     --primary-inverse: #fff;
-    --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+    --background-color: #001220;
+    --mantine-color-body: var(--background-color);
   }
+}
+
+[data-theme="light"] {
+  --primary: #ffffff;
+  --primary-hover: #ffdb58;
+  --primary-focus: rgba(216, 27, 96, 0.125);
+  --primary-inverse: #fff;
+  --background-color: #d3d3c6;
+  --mantine-color-body: #d3d3c6;
 }
 
 /* Pink Dark scheme (Forced) */
@@ -60,7 +47,8 @@
   --primary-hover: #ffdb58;
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #fff;
-  --background-color: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  --background-color: #001220;
+  --mantine-color-body: var(--background-color);
 }
 
 /* Pink (Common styles) */
