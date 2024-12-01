@@ -3,6 +3,8 @@ import React from "react";
 import { Container, Group, Center, Drawer, Burger, BackgroundImage, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LightModeSwitchButton } from "./LightModeSwitchButton";
+import { BsHouse, BsMedium } from "react-icons/bs";
+import { GrContact, GrProjects } from "react-icons/gr";
 
 function Nav() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -13,13 +15,28 @@ function Nav() {
         <Center>
           <Group gap={80}>
             <a href="/" className={classes.link}>
-              <span>Home</span>
+              <Group>
+                <BsHouse />
+                <span>Home</span>
+              </Group>
             </a>
             <a href="/projects" className={classes.link}>
-              <span>Projects</span>
+              <Group>
+                <GrProjects />
+                <span>Projects</span>
+              </Group>
+            </a>
+            <a href="https://medium.com/@kacper_wojcicki" className={classes.link}>
+              <Group>
+                <BsMedium />
+                <span>Blog</span>
+              </Group>
             </a>
             <a href="/contact" className={classes.link}>
-              <span>Contact</span>
+              <Group>
+                <GrContact />
+                <span>Contact</span>
+              </Group>
             </a>
           </Group>
         </Center>
