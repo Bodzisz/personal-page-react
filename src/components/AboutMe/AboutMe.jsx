@@ -9,14 +9,14 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 function AboutMe() {
   return (
-    <Container pb={30} id="about-me" fluid pl={0} pr={0} mr={0} ml={0} mih={"100vh"}>
-      <Container pt={50} pb={70} pr={30} pl={30} fluid style={{ backgroundColor: "#3e277b" }}>
+    <Container id="about-me" fluid pl={0} pr={0} mr={0} ml={0}>
+      <Container pb={30} pr={30} pl={30} fluid style={{ backgroundColor: "#3e277b" }}>
         <ScrollAnimation animateIn="fadeIn">
           <AboutMeInfo />
         </ScrollAnimation>
       </Container>
       <BackgroundImage src="/images/waves/aboutMeWaveUp.svg" fluid pr={0} mr={0}>
-        <Container pt={"calc(0.3 * 100vh)"} mr={0} pr={0} ml={0} pl={0} fluid>
+        <Container pt={"calc(0.2 * 100vh)"} mr={0} pr={0} ml={0} pl={0} fluid>
           <TechnologiesIcons />
         </Container>
       </BackgroundImage>
