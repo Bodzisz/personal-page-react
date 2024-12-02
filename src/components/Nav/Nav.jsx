@@ -1,44 +1,50 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import { Container, Group, Center, Drawer, Burger, BackgroundImage, Flex } from "@mantine/core";
+import { Container, Group, Center, Drawer, Burger, BackgroundImage, Anchor } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LightModeSwitchButton } from "./LightModeSwitchButton";
-import { BsHouse, BsMedium } from "react-icons/bs";
+import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrContact, GrProjects } from "react-icons/gr";
 
 function Nav() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
+  const getNavElements = () => {
+    return (
+      <>
+        <a href="/" className={classes.link}>
+          <Group>
+            <BsHouse />
+            <span>Home</span>
+          </Group>
+        </a>
+        <a href="/projects" className={classes.link}>
+          <Group>
+            <GrProjects />
+            <span>Projects</span>
+          </Group>
+        </a>
+        <a href="https://medium.com/@kacper_wojcicki" className={classes.link}>
+          <Group>
+            <BsMedium />
+            <span>Blog</span>
+          </Group>
+        </a>
+        <a href="/contact" className={classes.link}>
+          <Group>
+            <GrContact />
+            <span>Contact</span>
+          </Group>
+        </a>
+      </>
+    );
+  };
+
   const getNavOptions = () => {
     return (
       <Container fluid visibleFrom="sm" pt={50} pb={200}>
         <Center>
-          <Group gap={80}>
-            <a href="/" className={classes.link}>
-              <Group>
-                <BsHouse />
-                <span>Home</span>
-              </Group>
-            </a>
-            <a href="/projects" className={classes.link}>
-              <Group>
-                <GrProjects />
-                <span>Projects</span>
-              </Group>
-            </a>
-            <a href="https://medium.com/@kacper_wojcicki" className={classes.link}>
-              <Group>
-                <BsMedium />
-                <span>Blog</span>
-              </Group>
-            </a>
-            <a href="/contact" className={classes.link}>
-              <Group>
-                <GrContact />
-                <span>Contact</span>
-              </Group>
-            </a>
-          </Group>
+          <Group gap={80}>{getNavElements()}</Group>
         </Center>
         <Container pos={"absolute"} right={40} top={40}>
           <LightModeSwitchButton />
@@ -64,18 +70,26 @@ function Nav() {
             <Center>
               <LightModeSwitchButton />
             </Center>
-            <Group h="100%" gap={80} pt={"20vh"}>
-              <a href="/" className={classes.link}>
-                <span>Home</span>
-              </a>
-              <a href="/projects" className={classes.link}>
-                <span>Projects</span>
-              </a>
-              <a href="/contact" className={classes.link}>
-                <span>Contact</span>
-              </a>
+            <Group h="100%" gap={80} pt={"10vh"}>
+              {getNavElements()}
             </Group>
           </Drawer.Body>
+          <Group pos="absolute" bottom={5} w={"100%"} h={60}>
+            <Center w={"100%"}>
+              <Anchor href="https://github.com/Bodzisz" underline="never" pr={20}>
+                <BsGithub />
+              </Anchor>
+              <Anchor href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b" underline="never" pr={20}>
+                <BsLinkedin />
+              </Anchor>
+              <Anchor href="https://medium.com/@kacper_wojcicki" underline="never" pr={20}>
+                <BsMedium />
+              </Anchor>
+              <Anchor href="https://www.instagram.com/kacper_software" underline="never">
+                <BsInstagram />
+              </Anchor>
+            </Center>
+          </Group>
         </BackgroundImage>
       </Drawer>
     );
