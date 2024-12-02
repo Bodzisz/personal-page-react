@@ -1,46 +1,78 @@
-import { Card, Text, Button, Center, Anchor, Group, useMantineTheme, Image, Title } from "@mantine/core";
-import { BsMedium, BsNewspaper } from "react-icons/bs";
+import {
+  Card,
+  Text,
+  Button,
+  Center,
+  Anchor,
+  Group,
+  useMantineTheme,
+  Image,
+  Title,
+  Container,
+  List,
+  ThemeIcon,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import classes from "./NewsletterSubscriptionCard.module.css";
+import { CiCircleCheck } from "react-icons/ci";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 const NewsletterSubscriptionCard = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   return (
-    <Card
-      w={isMobile ? "90%" : "50%"}
-      shadow="sm"
-      padding="lg"
-      radius="md"
-      withBorder
-      style={{ background: "rgba(0, 0, 0, 0.5)" }}
-    >
-      <Center>
-        <Image src={"../../images/newsletter_logo.png"} h={100} w={100} style={{ borderRadius: "10px" }} />
-      </Center>
-      <Center>
-        <Group>
-          <Title pb={20} fw={500} c={"var(--mantine-color-white)"}>
-            Kacper Does Software Newsletter!
+    <Container size="md">
+      <div className={classes.inner}>
+        <div className={classes.content}>
+          <Title className={classes.title}>
+            <span className={classes.highlight}>Newsletter</span> for
+            <br /> Software Engineers
           </Title>
-        </Group>
-      </Center>
+          <Text c="dimmed" mt="md">
+            Allow me to send you monthly updates on software engineering, productivity, and clean code. I try to include
+            something for everyone, from beginners to experienced developers, from technical to soft skills.
+          </Text>
 
-      <Center pb={10}>
-        <Text size="md" c={"var(--mantine-color-white)"} style={{ textAlign: "center" }}>
-          Do you want to get monthly software engineering updates and technical and soft skills knowledge? Subscribe to
-          my monthly newsletter 👇
-        </Text>
-      </Center>
+          <List
+            mt={30}
+            spacing="sm"
+            size="sm"
+            icon={
+              <ThemeIcon size={20} radius="xl">
+                <FaRegCircleCheck size={20} />
+              </ThemeIcon>
+            }
+          >
+            <List.Item>
+              <b>Technical Skills</b> – Java, Spring Frmaework, React and others
+            </List.Item>
+            <List.Item>
+              <b>Soft Skills</b> – Producitvity, Time Management, Working in a Team
+            </List.Item>
+            <List.Item>
+              <b>Latest Updates</b> – I try to stay up to date with latest trends, so you don't have to
+            </List.Item>
+          </List>
 
-      <Anchor href="https://kacper-does-software.beehiiv.com/subscribe">
-        <Center>
-          <Button fullWidth mt="md" radius="md" maw={300}>
-            Subscribe for free
-          </Button>
-        </Center>
-      </Anchor>
-    </Card>
+          <Group mt={30}>
+            <Anchor href="https://kacper-does-software.beehiiv.com/subscribe">
+              <Button radius="xl" size="md" className={classes.control}>
+                {isMobile ? "Subscribe" : "Subscribe for free"}
+              </Button>
+            </Anchor>
+            <Anchor href="https://kacper-does-software.beehiiv.com">
+              <Button variant="default" radius="xl" size="md" className={classes.control}>
+                {isMobile ? "Learn more" : "View recent posts"}
+              </Button>
+            </Anchor>
+          </Group>
+        </div>
+        <Container pt={20}>
+          <Image src={"/images/newsletter_logo.png"} className={classes.image} style={{ borderRadius: "30px" }} />
+        </Container>
+      </div>
+    </Container>
   );
 };
 

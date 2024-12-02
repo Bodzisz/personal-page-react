@@ -7,7 +7,7 @@ function Welcome() {
     <Container>
       <Title
         order={1}
-        style={{ fontFamily: "Poppins sans-serif" }}
+        style={{ fontFamily: "Poppins sans-serif, var(--mantine-font-family)" }}
         c={"light-dark(var(--mantine-color-black), var(--mantine-color-white))"}
       >
         <Typewriter
