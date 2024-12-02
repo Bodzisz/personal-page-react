@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Group, Center, Drawer, Burger, BackgroundImage, Anchor } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LightModeSwitchButton } from "./LightModeSwitchButton";
-import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { GrContact, GrProjects } from "react-icons/gr";
 
 function Nav() {
@@ -76,6 +76,9 @@ function Nav() {
           </Drawer.Body>
           <Group pos="absolute" bottom={5} w={"100%"} h={60}>
             <Center w={"100%"}>
+              <Anchor href="https://x.com/kacpersoftware" underline="never" pr={20}>
+                <BsTwitterX />
+              </Anchor>
               <Anchor href="https://github.com/Bodzisz" underline="never" pr={20}>
                 <BsGithub />
               </Anchor>
