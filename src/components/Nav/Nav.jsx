@@ -70,7 +70,7 @@ function Nav() {
             <Center>
               <LightModeSwitchButton />
             </Center>
-            <Group h="100%" gap={80} pt={"10vh"}>
+            <Group h="100%" gap={40} pt={"10vh"}>
               {getNavElements()}
             </Group>
           </Drawer.Body>
