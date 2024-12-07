@@ -24,7 +24,7 @@
   text-decoration: none;
   color: var(--mantine-color-white);
   font-weight: 500;
-  font-size: var(--mantine-font-size-xl);
+  font-size: var(--mantine-font-size-md);
   font-family: "Bungee", sans-serif;
   transition: all 0.2s ease-in-out;
 

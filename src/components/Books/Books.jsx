@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
-import "./Projects.css";
+import "./Books.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme, SimpleGrid, Center, Container } from "@mantine/core";
-import ProjectCard from "../Card/ProjectCard";
+import BookCard from "./Card/BookCard";
+import { Outlet } from "react-router-dom";
 
-function Projects() {
-  const [projects, setProjects] = useState([]);
+function Books() {
+  const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   useEffect(() => {
-    fetch("/projects.json")
-      .then((res) => res.json())
-      .then((projects) => setProjects(projects))
+    fetch("/books.json")
+      .then(res => res.json())
+      .then(books => setBooks(books))
       .then(setLoading(false))
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
         setHasError(true);
       });
@@ -28,9 +29,13 @@ function Projects() {
   return (
     <Container mt={0} mb={100} size={"xl"}>
       <Center>
-        <SimpleGrid cols={isMobile ? 1 : 2} verticalSpacing={"xl"} spacing={"xl"}>
-          {projects.map((project) => (
-            <ProjectCard project={project} isMobile={isMobile} key={project.id} />
+        <SimpleGrid
+          cols={isMobile ? 1 : 2}
+          verticalSpacing={"xl"}
+          spacing={"xl"}
+        >
+          {books.map(book => (
+            <BookCard book={book} isMobile={isMobile} key={book.id} />
           ))}
         </SimpleGrid>
       </Center>
@@ -38,4 +43,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Books;

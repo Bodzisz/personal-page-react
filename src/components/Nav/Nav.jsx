@@ -1,13 +1,32 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import { Container, Group, Center, Drawer, Burger, BackgroundImage, Anchor } from "@mantine/core";
+import {
+  Container,
+  Group,
+  Center,
+  Drawer,
+  Burger,
+  BackgroundImage,
+  Anchor
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LightModeSwitchButton } from "./LightModeSwitchButton";
-import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import {
+  BsHouse,
+  BsMedium,
+  BsInstagram,
+  BsGithub,
+  BsLinkedin,
+  BsTwitterX
+} from "react-icons/bs";
 import { GrContact, GrProjects } from "react-icons/gr";
+import { FaBook } from "react-icons/fa";
 
 function Nav() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [
+    drawerOpened,
+    { toggle: toggleDrawer, close: closeDrawer }
+  ] = useDisclosure(false);
 
   const getNavElements = () => {
     return (
@@ -18,10 +37,12 @@ function Nav() {
             <span>Home</span>
           </Group>
         </a>
-        <a href="/projects" className={classes.link}>
+        <a href="/books" className={classes.link}>
           <Group>
-            <GrProjects />
-            <span>Projects</span>
+            <FaBook />
+            <span>
+              Book <br /> Reviews{" "}
+            </span>
           </Group>
         </a>
         <a href="https://medium.com/@kacper_wojcicki" className={classes.link}>
@@ -65,7 +86,10 @@ function Nav() {
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <BackgroundImage src="/images/waves/mobileNavWave.svg" h={"calc(100vh - 60px)"}>
+        <BackgroundImage
+          src="/images/waves/mobileNavWave.svg"
+          h={"calc(100vh - 60px)"}
+        >
           <Drawer.Body pl={0} ml={0}>
             <Center>
               <LightModeSwitchButton />
@@ -76,19 +100,38 @@ function Nav() {
           </Drawer.Body>
           <Group pos="absolute" bottom={5} w={"100%"} h={60}>
             <Center w={"100%"}>
-              <Anchor href="https://x.com/kacpersoftware" underline="never" pr={20}>
+              <Anchor
+                href="https://x.com/kacpersoftware"
+                underline="never"
+                pr={20}
+              >
                 <BsTwitterX />
               </Anchor>
-              <Anchor href="https://github.com/Bodzisz" underline="never" pr={20}>
+              <Anchor
+                href="https://github.com/Bodzisz"
+                underline="never"
+                pr={20}
+              >
                 <BsGithub />
               </Anchor>
-              <Anchor href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b" underline="never" pr={20}>
+              <Anchor
+                href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b"
+                underline="never"
+                pr={20}
+              >
                 <BsLinkedin />
               </Anchor>
-              <Anchor href="https://medium.com/@kacper_wojcicki" underline="never" pr={20}>
+              <Anchor
+                href="https://medium.com/@kacper_wojcicki"
+                underline="never"
+                pr={20}
+              >
                 <BsMedium />
               </Anchor>
-              <Anchor href="https://www.instagram.com/kacper_software" underline="never">
+              <Anchor
+                href="https://www.instagram.com/kacper_software"
+                underline="never"
+              >
                 <BsInstagram />
               </Anchor>
             </Center>
