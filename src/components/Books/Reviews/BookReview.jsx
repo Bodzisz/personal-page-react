@@ -5,13 +5,12 @@ import { useParams } from "react-router-dom";
 
 const BookReview = () => {
   const { title } = useParams();
-  const titleFormatted = title.replace(/\s+/g, "").toLowerCase();
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
   const [reviewMd, setReviewMd] = useState("");
 
   useEffect(() => {
-    fetch(`/reviews/${titleFormatted}.md`)
+    fetch(`/reviews/${title}.md`)
       .then(res => res.text())
       .then(review => setReviewMd(review))
       .then(setLoading(false))
@@ -25,7 +24,7 @@ const BookReview = () => {
     <Container mih={"100vh}"} pb={20}>
       <Center pb={20}>
         <Image
-          src={`/images/${titleFormatted}.jpg`}
+          src={`/images/${title}.jpg`}
           mah={"calc(100vh - 20px)"}
           maw={"calc(100vw - 20px)"}
           h={600}
@@ -33,9 +32,6 @@ const BookReview = () => {
           fit="fill"
           radius={20}
         />
-      </Center>
-      <Center pb={20}>
-        <Title order={1}>{title}</Title>
       </Center>
       <Container>
         <Markdown

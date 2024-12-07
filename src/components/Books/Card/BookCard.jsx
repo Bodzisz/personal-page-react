@@ -15,6 +15,8 @@ import {
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 
+export const formatBookTitle = title => title.replace(/\s+/g, "").toLowerCase();
+
 function BookCard({ book, isMobile }) {
   const cardDimensions = {
     width: isMobile ? 300 : 400,
@@ -79,7 +81,10 @@ function BookCard({ book, isMobile }) {
               </ScrollArea>
             </Spoiler>
             <Center pt={10}>
-              <Link key={book.title} to={`/books/${book.title}`}>
+              <Link
+                key={book.title}
+                to={`/books/${formatBookTitle(book.title)}`}
+              >
                 <Button>Read full review</Button>
               </Link>
             </Center>

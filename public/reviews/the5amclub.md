@@ -1,3 +1,6 @@
+# The 5 AM Club
+### by Robin Sharma
+
 This book goes far beyond just advocating for early rising. It presents transformative concepts that can completely reshape your life.
 
 Through the story of a struggling artist and entrepreneur who meet a mysterious mentor, Sharma demonstrates how waking up at 5 AM can transform your entire day and, ultimately, your life.

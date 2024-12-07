@@ -31,7 +31,11 @@
 .card-content {
   --padding: 1.5rem;
   padding: 0 var(--padding) var(--padding) var(--padding);
-  background: linear-gradient(hsl(0 0% 0% /0), hsl(0 0% 0% /0.3) 10%, hsl(0 0% 0% /100));
+  background: linear-gradient(
+    hsl(0 0% 0% /0),
+    hsl(0 0% 0% /0.3) 10%,
+    hsl(0 0% 0% /100)
+  );
 }
 
 .card-title {
