@@ -3,7 +3,6 @@ import "./Books.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme, SimpleGrid, Center, Container } from "@mantine/core";
 import BookCard from "./Card/BookCard";
-import { Outlet } from "react-router-dom";
 
 function Books() {
   const [books, setBooks] = useState([]);
@@ -27,7 +26,7 @@ function Books() {
   if (hasError) return <div className="center-div">Server Error :(</div>;
 
   return (
-    <Container mt={0} mb={100} size={"xl"}>
+    <Container mt={0} mb={100} size={"xl"} mih={"100vh"}>
       <Center>
         <SimpleGrid
           cols={isMobile ? 1 : 2}
