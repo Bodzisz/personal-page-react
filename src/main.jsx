@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "@mantine/core/styles.css";
-import "animate.css/animate.compat.css";
 import App from "./App";
 import { MantineProvider, createTheme } from "@mantine/core";
 
@@ -22,7 +21,7 @@ const theme = createTheme({
       "#FF00A1",
       "#E00890",
       "#C50E82",
-      "#AD1374",
+      "#AD1374"
     ],
     yellow: [
       "#fefae2",
@@ -34,9 +33,9 @@ const theme = createTheme({
       "#ddbf29",
       "#c4a81a",
       "#ae9510",
-      "#968000",
-    ],
-  },
+      "#968000"
+    ]
+  }
 });
 
 root.render(

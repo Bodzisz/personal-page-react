@@ -1,8 +1,0 @@
-.downArrow {
-  transition: all 0.2s ease-in-out;
-
-  @mixin hover {
-    transform: scale(1.4);
-    color: var(--primary-hover);
-  }
-}
