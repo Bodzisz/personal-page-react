@@ -3,6 +3,7 @@ import "./Books.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme, SimpleGrid, Center, Container } from "@mantine/core";
 import BookCard from "./Card/BookCard";
+import { Helmet } from "react-helmet-async";
 
 function Books() {
   const [books, setBooks] = useState([]);
@@ -22,23 +23,41 @@ function Books() {
       });
   }, []);
 
+  const getHelmetSeoTags = () => {
+    return (
+      <Helmet>
+        <title>{"Kacper Wojcicki - Book Reviews"}</title>
+        <meta
+          name="description"
+          content={
+            "Book Reviews by Kacper Wojcicki. Read about the latest books in software development, programming, productivity, psychology and self-development."
+          }
+        />
+        <link rel="canonical" href={"/books"} />
+      </Helmet>
+    );
+  };
+
   if (loading) return <div className="center-div" aria-busy="true"></div>;
   if (hasError) return <div className="center-div">Server Error :(</div>;
 
   return (
-    <Container mt={0} mb={100} size={"xl"} mih={"100vh"}>
-      <Center>
-        <SimpleGrid
-          cols={isMobile ? 1 : 2}
-          verticalSpacing={"xl"}
-          spacing={"xl"}
-        >
-          {books.map(book => (
-            <BookCard book={book} isMobile={isMobile} key={book.id} />
-          ))}
-        </SimpleGrid>
-      </Center>
-    </Container>
+    <>
+      {getHelmetSeoTags()}
+      <Container mt={0} mb={100} size={"xl"} mih={"100vh"}>
+        <Center>
+          <SimpleGrid
+            cols={isMobile ? 1 : 2}
+            verticalSpacing={"xl"}
+            spacing={"xl"}
+          >
+            {books.map(book => (
+              <BookCard book={book} isMobile={isMobile} key={book.id} />
+            ))}
+          </SimpleGrid>
+        </Center>
+      </Container>
+    </>
   );
 }
 

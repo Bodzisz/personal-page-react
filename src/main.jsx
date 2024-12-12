@@ -5,6 +5,7 @@ import "@mantine/core/styles.css";
 import "animate.css/animate.compat.css";
 import App from "./App";
 import { MantineProvider, createTheme } from "@mantine/core";
+import { HelmetProvider } from "react-helmet-async";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,7 +23,7 @@ const theme = createTheme({
       "#FF00A1",
       "#E00890",
       "#C50E82",
-      "#AD1374",
+      "#AD1374"
     ],
     yellow: [
       "#fefae2",
@@ -34,15 +35,17 @@ const theme = createTheme({
       "#ddbf29",
       "#c4a81a",
       "#ae9510",
-      "#968000",
-    ],
-  },
+      "#968000"
+    ]
+  }
 });
 
 root.render(
   <React.StrictMode>
     <MantineProvider theme={theme} defaultColorScheme="dark">
-      <App />
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </MantineProvider>
   </React.StrictMode>
 );
