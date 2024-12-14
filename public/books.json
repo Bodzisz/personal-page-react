@@ -5,5 +5,12 @@
     "desc": "This book goes far beyond just advocating for early rising. It presents transformative concepts that can completely reshape your life. Through the story of a struggling artist and entrepreneur who meet a mysterious mentor, Sharma demonstrates how waking up at 5 AM can transform your entire day and, ultimately, your life.",
     "image": "the5amclub.jpg",
     "topics": ["Productivity", "Self-Improvement", "Psychology"]
+  },
+  {
+    "title": "The Diary Of A Ceo",
+    "author": "Steven Bartlett",
+    "desc": "Think of this book as your personal mentor sitting across from you at a coffee shop, sharing life lessons learned the hard way. Bartlett has distilled years of experience, countless podcast interviews, and his own journey into these 33 fundamental principles that shape both business and personal success.",
+    "image": "thediaryofaceo.jpg",
+    "topics": ["Buisness", "Self-Improvement", "Psychology", "Marketing"]
   }
 ]
