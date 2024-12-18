@@ -52,6 +52,7 @@ root.render(
   <React.StrictMode>
     <MantineProvider theme={theme} defaultColorScheme="dark">
       <HelmetProvider>
+        <link rel="canonical" href={"https://kacper.software/"} />
         <App />
       </HelmetProvider>
     </MantineProvider>

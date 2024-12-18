@@ -29,7 +29,7 @@ const BookReview = () => {
           name="description"
           content={`${title} book review. Key takeaways and insights from the book ${title}. Personal thoughts and advices`}
         />
-        <link rel="canonical" href={`/books/${title}`} />
+        <link rel="canonical" href={`https://kacper.software/books/${title}`} />
       </Helmet>
     );
   };

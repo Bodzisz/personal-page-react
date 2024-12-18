@@ -33,7 +33,7 @@ function Books() {
             "Book Reviews by Kacper Wojcicki. Read about the latest books in software development, programming, productivity, psychology and self-development."
           }
         />
-        <link rel="canonical" href={"/books"} />
+        <link rel="canonical" href={"https://kacper.software/books"} />
       </Helmet>
     );
   };
