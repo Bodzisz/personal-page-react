@@ -45,7 +45,7 @@ function Nav() {
             </span>
           </Group>
         </a>
-        <a href="https://medium.com/@kacper_wojcicki" className={classes.link}>
+        <a href="https://blog.kacper.software" className={classes.link}>
           <Group>
             <BsMedium />
             <span>Blog</span>
