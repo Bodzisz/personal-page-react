@@ -12,24 +12,24 @@ function AboutMeInfo() {
     return isMobile ? (
       <>
         <Center>
-          <FaJava size="100" color={"var(--mantine-color-white)"} />
-          <Title order={1} id="about-me-name" c={"var(--mantine-color-white)"} pt={20}>
+          <FaJava size="100" color={"var(--text-color)"} />
+          <Title order={1} id="about-me-name" c={"var(--text-color))"} pt={20}>
             Kacper <br /> Wójcicki
           </Title>
         </Center>
-        <Center style={{ borderBottom: "2px solid var(--mantine-color-white)" }}>
+        <Center style={{ borderBottom: "2px solid var(--text-color)" }}>
           <Image src="/images/me.png" alt="Photo of me" h={200} w={200} />
         </Center>
       </>
     ) : (
       <Center>
-        <Group style={{ borderBottom: "2px solid var(--mantine-color-white)" }}>
+        <Group style={{ borderBottom: "2px solid var(--text-color)" }}>
           <Image src="/images/me.png" alt="Photo of me" h={200} w={200} />
-          <Title order={1} id="about-me-name" pt={50} c={"var(--mantine-color-white)"}>
+          <Title order={1} id="about-me-name" pt={50} c={"var(--text-color)"}>
             Kacper <br /> Wójcicki
           </Title>
           <Container pt={50} pl={50}>
-            <FaJava size="100" color={"var(--mantine-color-white)"} />
+            <FaJava size="100" color={"var(--text-color)"} />
           </Container>
         </Group>
       </Center>
@@ -44,7 +44,7 @@ function AboutMeInfo() {
           Java Software Engineer
         </Title>
       </Center>
-      <Container pt={10} c={"var(--mantine-color-white)"} style={{ textAlign: "center" }}>
+      <Container pt={10} c={"var(--text-color)"} style={{ textAlign: "center" }}>
         <Title order={3} pb={30}>
           Java | Spring | React | Clean Code | Productivity
         </Title>

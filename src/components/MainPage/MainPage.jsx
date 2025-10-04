@@ -11,26 +11,26 @@ import ScrollAnimation from "react-animate-on-scroll";
 function MainPage() {
   return (
     <Container mt={"100px"} fluid pl={0} pr={0}>
-      <BackgroundImage src="/images/waves/mainPageWaveDown.svg">
-        <ScrollAnimation animateIn="fadeIn" initiallyVisible={true} animateOnce={true}>
-          <Container pb={400} fluid>
-            <Center w={"100%"} m={0} p={0}>
-              <Welcome />
-            </Center>
-            <Center pt={10}>
-              <Text>Read more about me</Text>
-            </Center>
-            <Center w={"100%"}>
-              <Link activeClass="active" to="about-me-name" spy={true} smooth={true} offset={-70} duration={1000}>
-                <MdOutlineKeyboardArrowDown id="down-arrow" size="100" className={classes.downArrow} />
-              </Link>
-            </Center>
-            <Center w={"100%"}>
-              <NewsletterSubscriptionCard />
-            </Center>
-          </Container>
-        </ScrollAnimation>
-      </BackgroundImage>
+      {/* <BackgroundImage src="/images/waves/mainPageWaveDown.svg"> */}
+      <ScrollAnimation animateIn="fadeIn" initiallyVisible={true} animateOnce={true}>
+        <Container pb={400} fluid>
+          <Center w={"100%"} m={0} p={0}>
+            <Welcome />
+          </Center>
+          <Center pt={10}>
+            <Text>Read more about me</Text>
+          </Center>
+          <Center w={"100%"}>
+            <Link activeClass="active" to="about-me-name" spy={true} smooth={true} offset={-70} duration={1000}>
+              <MdOutlineKeyboardArrowDown id="down-arrow" size="100" className={classes.downArrow} />
+            </Link>
+          </Center>
+          <Center w={"100%"}>
+            <NewsletterSubscriptionCard />
+          </Center>
+        </Container>
+      </ScrollAnimation>
+      {/* </BackgroundImage> */}
       <AboutMe />
     </Container>
   );
