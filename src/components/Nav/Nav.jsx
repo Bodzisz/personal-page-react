@@ -1,32 +1,14 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import {
-  Container,
-  Group,
-  Center,
-  Drawer,
-  Burger,
-  BackgroundImage,
-  Anchor
-} from "@mantine/core";
+import { Container, Group, Center, Drawer, Burger, BackgroundImage, Anchor } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LightModeSwitchButton } from "./LightModeSwitchButton";
-import {
-  BsHouse,
-  BsMedium,
-  BsInstagram,
-  BsGithub,
-  BsLinkedin,
-  BsTwitterX
-} from "react-icons/bs";
+import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { GrContact, GrProjects } from "react-icons/gr";
 import { FaBook } from "react-icons/fa";
 
 function Nav() {
-  const [
-    drawerOpened,
-    { toggle: toggleDrawer, close: closeDrawer }
-  ] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   const getNavElements = () => {
     return (
@@ -86,77 +68,51 @@ function Nav() {
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <BackgroundImage
-          src="/images/waves/mobileNavWave.svg"
-          h={"calc(100vh - 60px)"}
-        >
-          <Drawer.Body pl={0} ml={0}>
-            <Center>
-              <LightModeSwitchButton />
-            </Center>
-            <Group h="100%" gap={40} pt={"10vh"}>
-              {getNavElements()}
-            </Group>
-          </Drawer.Body>
-          <Group pos="absolute" bottom={5} w={"100%"} h={60}>
-            <Center w={"100%"}>
-              <Anchor
-                href="https://x.com/kacpersoftware"
-                underline="never"
-                pr={20}
-              >
-                <BsTwitterX />
-              </Anchor>
-              <Anchor
-                href="https://github.com/Bodzisz"
-                underline="never"
-                pr={20}
-              >
-                <BsGithub />
-              </Anchor>
-              <Anchor
-                href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b"
-                underline="never"
-                pr={20}
-              >
-                <BsLinkedin />
-              </Anchor>
-              <Anchor
-                href="https://medium.com/@kacper_wojcicki"
-                underline="never"
-                pr={20}
-              >
-                <BsMedium />
-              </Anchor>
-              <Anchor
-                href="https://www.instagram.com/kacper_software"
-                underline="never"
-              >
-                <BsInstagram />
-              </Anchor>
-            </Center>
+        <Drawer.Body pl={0} ml={0}>
+          <Center>
+            <LightModeSwitchButton />
+          </Center>
+          <Group h="100%" gap={40} pt={"10vh"}>
+            {getNavElements()}
           </Group>
-        </BackgroundImage>
+        </Drawer.Body>
+        <Group pos="absolute" bottom={5} w={"100%"} h={60}>
+          <Center w={"100%"}>
+            <Anchor href="https://x.com/kacpersoftware" underline="never" pr={20}>
+              <BsTwitterX />
+            </Anchor>
+            <Anchor href="https://github.com/Bodzisz" underline="never" pr={20}>
+              <BsGithub />
+            </Anchor>
+            <Anchor href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b" underline="never" pr={20}>
+              <BsLinkedin />
+            </Anchor>
+            <Anchor href="https://medium.com/@kacper_wojcicki" underline="never" pr={20}>
+              <BsMedium />
+            </Anchor>
+            <Anchor href="https://www.instagram.com/kacper_software" underline="never">
+              <BsInstagram />
+            </Anchor>
+          </Center>
+        </Group>
       </Drawer>
     );
   };
 
   return (
-    <BackgroundImage src="/images/waves/navWave.svg">
-      <Container id="nav">
-        {getNavOptions()}
-        <Burger
-          opened={drawerOpened}
-          onClick={toggleDrawer}
-          color="var(--mantine-color-white)"
-          hiddenFrom="sm"
-          pt={50}
-          pb={150}
-          size={40}
-        />
-        {getMobileNavOptions()}
-      </Container>
-    </BackgroundImage>
+    <Container id="nav">
+      {getNavOptions()}
+      <Burger
+        opened={drawerOpened}
+        onClick={toggleDrawer}
+        color="var(--text-color)"
+        hiddenFrom="sm"
+        pt={50}
+        pb={150}
+        size={40}
+      />
+      {getMobileNavOptions()}
+    </Container>
   );
 }
 

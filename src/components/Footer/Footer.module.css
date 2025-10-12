@@ -3,6 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  margin-bottom: 20px;
   /* background: #000; */
   /* height: 80px;
   width: 100vw; */
@@ -37,7 +38,7 @@
 }
 
 .hover {
-  color: var(--primary-inverse);
+  color: var(--text-color);
 
   @mixin hover {
     color: var(--primary-hover);

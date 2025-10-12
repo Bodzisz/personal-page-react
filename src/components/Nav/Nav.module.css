@@ -22,7 +22,7 @@
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   text-decoration: none;
-  color: var(--mantine-color-white);
+  color: var(--text-color);
   font-weight: 500;
   font-size: var(--mantine-font-size-md);
   font-family: "Bungee", sans-serif;

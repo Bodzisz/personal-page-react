@@ -10,20 +10,13 @@ import ScrollAnimation from "react-animate-on-scroll";
 function AboutMe() {
   return (
     <Container id="about-me" fluid pl={0} pr={0} mr={0} ml={0}>
-      <Container
-        pt={50}
-        pb={100}
-        pr={30}
-        pl={30}
-        fluid
-        style={{ backgroundColor: "var(--secondary-background-color)" }}
-      >
+      <Container pt={50} pb={12} pr={30} pl={30} fluid style={{ backgroundColor: "var(--background-color)" }}>
         <ScrollAnimation animateIn="fadeIn">
           <AboutMeInfo />
         </ScrollAnimation>
       </Container>
       {/* <BackgroundImage src="/images/waves/aboutMeWaveUp.svg" fluid pr={0} mr={0}> */}
-      <Container pt={"calc(0.2 * 100vh)"} mr={0} pr={0} ml={0} pl={0} fluid>
+      <Container pt={30} pb={20} mr={0} pr={0} ml={0} pl={0} fluid>
         <TechnologiesIcons />
       </Container>
       {/* </BackgroundImage> */}
