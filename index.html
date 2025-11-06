@@ -4,34 +4,20 @@
     <meta charset="utf-8" />
     <meta http-equiv="content-language" content="en-US" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="theme-color"
-      content="#f4f0ec"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#001220"
-      media="(prefers-color-scheme: dark)"
-    />
+    <meta name="theme-color" content="#f4f0ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#001220" media="(prefers-color-scheme: dark)" />
     <meta
       name="description"
       content="Kacper Wojcicki | Fullstack Software Engineer specializing in Java & Spring Boot. Passionate about clean code, software, blogging (Medium) and book reviews"
       data-rh="true"
     />
 
-    <meta
-      property="og:title"
-      content="Kacper Wojcicki | Fullstack Software Engineer & Tech Blogger"
-    />
+    <meta property="og:title" content="Kacper Wojcicki | Fullstack Software Engineer & Tech Blogger" />
     <meta
       property="og:description"
       content="Software Engineer sharing insights on clean code and software development"
     />
-    <meta
-      property="og:image"
-      content="https://kacper.software/images/newsletter_logo.png"
-    />
+    <meta property="og:image" content="https://kacper.software/images/newsletter_logo.png" />
     <meta property="og:url" content="https://kacper.software" />
     <meta property="og:type" content="website" />
 
@@ -48,6 +34,17 @@
     <link rel="icon" href="./public/images/logo.png" />
     <title>Kacper Wojcicki | Fullstack Software Engineer & Tech Blogger</title>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G63D2HWGFZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-G63D2HWGFZ");
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
