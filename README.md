@@ -1,3 +1,3 @@
 ## App URL
 
-https://kacper-wojcicki.ovh
+https://kacper.software
