@@ -36,8 +36,8 @@
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   }
 
-  @mixin hover {
-    transform: scale(1.4);
+  &:hover {
+    transform: scale(1.1);
     color: var(--primary-hover);
   }
 }

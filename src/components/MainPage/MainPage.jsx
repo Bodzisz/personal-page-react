@@ -4,33 +4,39 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import classes from "./MainPage.module.css";
 import AboutMe from "../AboutMe/AboutMe";
 import { Link } from "react-scroll";
-import { Container, Center, BackgroundImage, Text, Group } from "@mantine/core";
+import { Container, Center, BackgroundImage, Text, Group, Stack } from "@mantine/core";
 import NewsletterSubscriptionCard from "./NewsletterSubscriptionCard";
 import ScrollAnimation from "react-animate-on-scroll";
 
 function MainPage() {
   return (
-    <Container mt={"100px"} fluid pl={0} pr={0}>
-      {/* <BackgroundImage src="/images/waves/mainPageWaveDown.svg"> */}
+    <Container fluid p={0} mt={100}>
       <ScrollAnimation animateIn="fadeIn" initiallyVisible={true} animateOnce={true}>
-        <Container pb={400} fluid>
-          <Center w={"100%"} m={0} p={0}>
+        <Container size="lg" pb={100}>
+          <Stack align="center" gap="xl">
             <Welcome />
-          </Center>
-          <Center pt={10}>
-            <Text>Read more about me</Text>
-          </Center>
-          <Center w={"100%"}>
+
+            <Text size="xl" c="dimmed" fw={500}>
+              Read more about me
+            </Text>
+
             <Link activeClass="active" to="about-me-name" spy={true} smooth={true} offset={-70} duration={1000}>
-              <MdOutlineKeyboardArrowDown id="down-arrow" size="100" className={classes.downArrow} />
+              <MdOutlineKeyboardArrowDown
+                size={60}
+                style={{
+                  cursor: 'pointer',
+                  animation: 'bounce 2s infinite'
+                }}
+                color="var(--mantine-color-violet-4)"
+              />
             </Link>
-          </Center>
-          <Center w={"100%"}>
-            <NewsletterSubscriptionCard />
-          </Center>
+
+            <Container size="sm" w="100%">
+              <NewsletterSubscriptionCard />
+            </Container>
+          </Stack>
         </Container>
       </ScrollAnimation>
-      {/* </BackgroundImage> */}
       <AboutMe />
     </Container>
   );

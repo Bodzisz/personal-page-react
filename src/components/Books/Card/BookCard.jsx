@@ -11,7 +11,8 @@ import {
   BackgroundImage,
   Container,
   Spoiler,
-  ScrollArea
+  ScrollArea,
+  Text
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 
@@ -24,27 +25,29 @@ function BookCard({ book, isMobile }) {
   };
 
   return (
-    <Card radius={20} m={0} p={0}>
+    <Card radius={20} m={0} p={0} className="glass" bg="transparent">
       <BackgroundImage
         src={`../../images/${book.image}`}
         h={cardDimensions.height}
         w={cardDimensions.width}
         className={classes.cardBackground}
+        radius={20}
       >
         <Card.Section
           pos={"absolute"}
           bottom={0}
-          bg={"rgba(0, 0, 0, 0.8)"}
+          bg={"rgba(0, 0, 0, 0.6)"}
           w={"100%"}
           pb={20}
           pt={10}
+          style={{ backdropFilter: "blur(5px)" }}
         >
           <Center
             pb={isMobile ? 10 : 30}
             pt={10}
-            c={"var(--mantine-color-white)"}
+            c={"white"}
           >
-            <Title order={3}>{book.title}</Title>
+            <Title order={3} style={{ fontFamily: "Bungee, sans-serif" }}>{book.title}</Title>
           </Center>
 
           <Container pb={10}>
@@ -61,9 +64,9 @@ function BookCard({ book, isMobile }) {
                 pb={10}
               >
                 <Center pt={10} pb={10}>
-                  <Group>
+                  <Group justify="center">
                     {book.topics.map(topic => (
-                      <Badge variant="outline" color="var(--primary-hover)">
+                      <Badge variant="outline" color="gray.5" key={topic}>
                         {topic}
                       </Badge>
                     ))}
@@ -75,9 +78,11 @@ function BookCard({ book, isMobile }) {
                 w={cardDimensions.width - 40}
                 h={isMobile ? 120 : 270}
                 scrollbars="y"
-                c={"var(--mantine-color-white)"}
+                c={"dimmed"}
               >
-                {book.desc}
+                <Text size="sm" style={{ fontFamily: "Inter, sans-serif" }} c="white">
+                  {book.desc}
+                </Text>
               </ScrollArea>
             </Spoiler>
             <Center pt={10}>
@@ -85,7 +90,7 @@ function BookCard({ book, isMobile }) {
                 key={book.title}
                 to={`/books/${formatBookTitle(book.title)}`}
               >
-                <Button>Read full review</Button>
+                <Button variant="outline" color="gray.5" radius="xl">Read full review</Button>
               </Link>
             </Center>
           </Container>

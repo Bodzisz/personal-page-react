@@ -7,8 +7,11 @@ function Welcome() {
     <Container>
       <Title
         order={1}
-        style={{ fontFamily: "Poppins sans-serif, var(--mantine-font-family)" }}
-        c={"light-dark(var(--mantine-color-black), var(--mantine-color-white))"}
+        size="3rem"
+        fw={900}
+        variant="gradient"
+        gradient={{ from: 'violet', to: '#c4a81a', deg: 45 }}
+        style={{ fontFamily: "Bungee, sans-serif" }}
       >
         <Typewriter
           options={{

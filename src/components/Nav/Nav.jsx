@@ -1,8 +1,7 @@
 import classes from "./Nav.module.css";
 import React from "react";
-import { Container, Group, Center, Drawer, Burger, BackgroundImage, Anchor } from "@mantine/core";
+import { Container, Group, Center, Drawer, Burger, Anchor, Paper, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { LightModeSwitchButton } from "./LightModeSwitchButton";
 import { BsHouse, BsMedium, BsInstagram, BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { GrContact, GrProjects } from "react-icons/gr";
 import { FaBook } from "react-icons/fa";
@@ -10,108 +9,64 @@ import { FaBook } from "react-icons/fa";
 function Nav() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
-  const getNavElements = () => {
-    return (
-      <>
-        <a href="/" className={classes.link}>
-          <Group>
-            <BsHouse />
-            <span>Home</span>
-          </Group>
-        </a>
-        <a href="/books" className={classes.link}>
-          <Group>
-            <FaBook />
-            <span>
-              Book <br /> Reviews{" "}
-            </span>
-          </Group>
-        </a>
-        <a href="https://blog.kacper.software" className={classes.link}>
-          <Group>
-            <BsMedium />
-            <span>Blog</span>
-          </Group>
-        </a>
-        <a href="/contact" className={classes.link}>
-          <Group>
-            <GrContact />
-            <span>Contact</span>
-          </Group>
-        </a>
-      </>
-    );
-  };
+  const links = [
+    { link: "/", label: "Home", icon: BsHouse },
+    { link: "/books", label: "Book Reviews", icon: FaBook },
+    { link: "https://blog.kacper.software", label: "Blog", icon: BsMedium },
+    { link: "/contact", label: "Contact", icon: GrContact },
+  ];
 
-  const getNavOptions = () => {
-    return (
-      <Container fluid visibleFrom="sm" pt={50} pb={200}>
-        <Center>
-          <Group gap={80}>{getNavElements()}</Group>
-        </Center>
-        <Container pos={"absolute"} right={40} top={40}>
-          <LightModeSwitchButton />
-        </Container>
-      </Container>
-    );
-  };
+  const items = links.map((link) => (
+    <a
+      key={link.label}
+      href={link.link}
+      className={classes.link}
+      onClick={(event) => {
+        // event.preventDefault(); // Remove if using real routing
+        // navigate(link.link);
+      }}
+    >
+      <Group gap={8}>
+        <link.icon size={18} />
+        <span>{link.label}</span>
+      </Group>
+    </a>
+  ));
 
-  const getMobileNavOptions = () => {
-    return (
+  return (
+    <Container size="md" py="xl" id="nav">
+      <Paper className="glass" radius="xl" p="xs" visibleFrom="sm">
+        <Group justify="center" px="md">
+          <Group gap="lg">
+            {items}
+          </Group>
+        </Group>
+      </Paper>
+
+      <Group justify="flex-end" hiddenFrom="sm">
+        <Burger opened={drawerOpened} onClick={toggleDrawer} size="sm" />
+      </Group>
+
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
-        overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
-        size="70%"
-        padding="0"
-        h={drawerOpened ? "100vh" : 0}
+        size="100%"
+        padding="md"
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <Drawer.Body pl={0} ml={0}>
-          <Center>
-            <LightModeSwitchButton />
-          </Center>
-          <Group h="100%" gap={40} pt={"10vh"}>
-            {getNavElements()}
-          </Group>
-        </Drawer.Body>
-        <Group pos="absolute" bottom={5} w={"100%"} h={60}>
-          <Center w={"100%"}>
-            <Anchor href="https://x.com/kacpersoftware" underline="never" pr={20}>
-              <BsTwitterX />
-            </Anchor>
-            <Anchor href="https://github.com/Bodzisz" underline="never" pr={20}>
-              <BsGithub />
-            </Anchor>
-            <Anchor href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b" underline="never" pr={20}>
-              <BsLinkedin />
-            </Anchor>
-            <Anchor href="https://medium.com/@kacper_wojcicki" underline="never" pr={20}>
-              <BsMedium />
-            </Anchor>
-            <Anchor href="https://www.instagram.com/kacper_software" underline="never">
-              <BsInstagram />
-            </Anchor>
-          </Center>
+        <Stack gap="lg">
+          {items}
+        </Stack>
+
+        <Group justify="center" gap="lg" mt="xl">
+          <Anchor href="https://x.com/kacpersoftware" c="dimmed"><BsTwitterX size={20} /></Anchor>
+          <Anchor href="https://github.com/Bodzisz" c="dimmed"><BsGithub size={20} /></Anchor>
+          <Anchor href="https://pl.linkedin.com/in/kacper-wojcicki-05a13521b" c="dimmed"><BsLinkedin size={20} /></Anchor>
+          <Anchor href="https://medium.com/@kacper_wojcicki" c="dimmed"><BsMedium size={20} /></Anchor>
+          <Anchor href="https://www.instagram.com/kacper_software" c="dimmed"><BsInstagram size={20} /></Anchor>
         </Group>
       </Drawer>
-    );
-  };
-
-  return (
-    <Container id="nav">
-      {getNavOptions()}
-      <Burger
-        opened={drawerOpened}
-        onClick={toggleDrawer}
-        color="var(--text-color)"
-        hiddenFrom="sm"
-        pt={50}
-        pb={150}
-        size={40}
-      />
-      {getMobileNavOptions()}
     </Container>
   );
 }
