@@ -1,6 +1,7 @@
 import React from "react";
+import classes from "./Footer.module.css";
 import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
-import { Anchor, Group, Container } from "@mantine/core";
+import { Anchor, Group, Container, Paper, Stack, Text } from "@mantine/core";
 
 function Footer() {
   const socialLinks = [
@@ -16,14 +17,7 @@ function Footer() {
       key={item.link}
       href={item.link}
       target="_blank"
-      c="dimmed"
-      style={{
-        transition: 'all 0.3s ease',
-        ':hover': {
-          color: '#c4a81a',
-          transform: 'scale(1.1)'
-        }
-      }}
+      className={classes.socialLink}
     >
       <item.icon size={24} />
     </Anchor>
@@ -31,9 +25,16 @@ function Footer() {
 
   return (
     <Container fluid p="xl" pb={{ base: 100, sm: 'xl' }} mt={50}>
-      <Group justify="center" gap="xl">
-        {items}
-      </Group>
+      <Paper className="glass" radius="xl" p="md">
+        <Stack align="center" gap="xs">
+          <Group justify="center" gap="xl">
+            {items}
+          </Group>
+          <Text c="dimmed" size="sm" pt="md">
+            © {new Date().getFullYear()} Kacper Wójcicki
+          </Text>
+        </Stack>
+      </Paper>
     </Container>
   );
 }
