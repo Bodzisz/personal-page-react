@@ -27,7 +27,7 @@ function AboutMeInfo() {
             </Title>
 
             <Title order={2} className={classes.headerFont} style={{ textAlign: "center", fontFamily: "Bungee, sans-serif" }} id="about-me-java-dev" c="violet.3">
-              Java Software Engineer
+              Software Engineer
             </Title>
 
             <Stack gap="xs" align="center">
@@ -36,7 +36,7 @@ function AboutMeInfo() {
               </Title>
 
               <Text c="dimmed" size="lg" ta="center">
-                I am a Java Fullstack Software Engineer and Blogger from Poland 🇵🇱 with a passion for software engineering. I
+                I am a Fullstack Software Engineer and Blogger from Poland 🇵🇱 with a passion for software engineering. I
                 have done Bachelor of Science in <b>Applied Computer Science</b> on Wrocław University of Science and
                 Technology. <Anchor href="https://pwr.edu.pl/en/" c="violet"> (WUST)</Anchor>
               </Text>

@@ -15,7 +15,7 @@ function Welcome() {
       >
         <Typewriter
           options={{
-            strings: ["Hello, welcome to my site!", "I am a Java Developer.", "I am happy you are here ;)"],
+            strings: ["Hello, welcome to my site!", "I am a Software Engineer.", "I am happy you are here ;)"],
             autoStart: true,
             loop: true,
           }}
