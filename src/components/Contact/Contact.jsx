@@ -56,7 +56,7 @@ function Contact() {
           <Center pt={15} pb={30}>
             <Group>
               <Text c={"var(--text-color)"}>Or write me directly at</Text>{" "}
-              <Text c={"var(--primary-hover)"}>kacperdoessoftware@gmail.com</Text>
+              <Text c={"var(--primary-hover)"}>contact@kacper.software</Text>
             </Group>
           </Center>
         </Container>
