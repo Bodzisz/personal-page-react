@@ -3,7 +3,7 @@ import "./Books.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme, SimpleGrid, Center, Container } from "@mantine/core";
 import BookCard from "./Card/BookCard";
-import { Helmet } from "react-helmet-async";
+import SEO from "../SEO/SEO";
 
 function Books() {
   const [books, setBooks] = useState([]);
@@ -25,16 +25,11 @@ function Books() {
 
   const getHelmetSeoTags = () => {
     return (
-      <Helmet>
-        <title>{"Kacper Wojcicki - Book Reviews"}</title>
-        <meta
-          name="description"
-          content={
-            "Book Reviews by Kacper Wojcicki. Read about the latest books in software development, programming, productivity, psychology and self-development."
-          }
-        />
-        <link rel="canonical" href={"https://kacper.software/books"} />
-      </Helmet>
+      <SEO
+        title="Kacper Wojcicki - Book Reviews"
+        description="Book Reviews by Kacper Wojcicki. Read about the latest books in software development, programming, productivity, psychology and self-development."
+        canonical="https://kacper.software/books"
+      />
     );
   };
 

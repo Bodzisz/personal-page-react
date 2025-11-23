@@ -2,7 +2,7 @@ import { Container, Center, Image } from "@mantine/core";
 import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../SEO/SEO";
 
 const BookReview = () => {
   const { title } = useParams();
@@ -23,14 +23,13 @@ const BookReview = () => {
 
   const getHelmetSeoTags = () => {
     return (
-      <Helmet>
-        <title>{`Kacper Wojcicki - ${title} book review`}</title>
-        <meta
-          name="description"
-          content={`${title} book review. Key takeaways and insights from the book ${title}. Personal thoughts and advices`}
-        />
-        <link rel="canonical" href={`https://kacper.software/books/${title}`} />
-      </Helmet>
+      <SEO
+        title={`Kacper Wojcicki - ${title} book review`}
+        description={`${title} book review. Key takeaways and insights from the book ${title}. Personal thoughts and advices`}
+        canonical={`https://kacper.software/books/${title}`}
+        type="article"
+        image={`https://kacper.software/images/${title}.jpg`}
+      />
     );
   };
 

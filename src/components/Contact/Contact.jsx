@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { Button, Center, Container, Group, Input, Textarea, Title, Text } from "@mantine/core";
 import ContactLink from "./ContactLink";
-import { Helmet } from "react-helmet-async";
+import SEO from "../SEO/SEO";
 
 function Contact() {
   const getEmailContactForm = () => {
@@ -88,16 +88,11 @@ function Contact() {
 
   const getHelmetSeoTags = () => {
     return (
-      <Helmet>
-        <title>{"Kacper Wojcicki - Contact"}</title>
-        <meta
-          name="description"
-          content={
-            "Connect with Kacper Wojcicki on Medium, Instagram, X/Twitter, GitHub, LinkedIn, or via email. Explore my work, projects, and ideas across platforms"
-          }
-        />
-        <link rel="canonical" href={"https://kacper.software/contact"} />
-      </Helmet>
+      <SEO
+        title="Kacper Wojcicki - Contact"
+        description="Connect with Kacper Wojcicki on Medium, Instagram, X/Twitter, GitHub, LinkedIn, or via email. Explore my work, projects, and ideas across platforms"
+        canonical="https://kacper.software/contact"
+      />
     );
   };
 
