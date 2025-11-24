@@ -28,7 +28,7 @@ const theme = createTheme({
 
 root.render(
   <React.StrictMode>
-    <MantineProvider theme={theme} defaultColorScheme="dark">
+    <MantineProvider theme={theme} defaultColorScheme="dark" forceColorScheme="dark">
       <HelmetProvider>
         <link rel="canonical" href={"https://kacper.software/"} />
         <App />
