@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { AppShell } from "@mantine/core";
 import BookReview from "./components/Books/Reviews/BookReview";
+import NotFound from "./components/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />
+  },
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
 
